@@ -1,4 +1,4 @@
-# Everaldo Martins - Portfólio
+# Everaldo Martins - Portifólio
 
 ## Índice
 - [Descrição](#descrição)
@@ -9,7 +9,7 @@
 - [Licença](#licença)
 
 ## Descrição
-Este é o portfólio pessoal de Everaldo Martins, criado para apresentar suas habilidades, experiências e fornecer meios de contato. O site é composto por seções que incluem uma introdução pessoal, experiência profissional, habilidades técnicas, equipe de trabalho e informações de contato.
+Este é o projeto portfólio pessoal, criado para apresentar minhas habilidades, experiências e fornecer meios de contato. O projeto é composto por seções que incluem uma introdução pessoal, experiência profissional, habilidades técnicas, equipe de trabalho e informações de contato.
 
 ## Estrutura do Projeto
 A estrutura básica de diretórios do projeto é a seguinte:
