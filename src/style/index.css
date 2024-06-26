@@ -213,25 +213,29 @@ section .title::after {
     color: var(--color_04);
 }
 
-.navbar .menu li {
+.navbar .menu {
+    display: flex;
     list-style: none;
-    display: inline-block;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0px;
 }
 
 .navbar .menu li a {
-    display: block;
+    display: flex;
     color: var(--color_04);
     font-size: 14px;
     font-weight: 300;
-    margin: 0 0 0 25px;
-    transition: color 0.3s ease;
+    padding: 20px;
+    transition: all .1s ease .3s;
 }
 
 .navbar .menu li a:hover {
     color: var(--color_05);
 }
 
-.navbar.sticky .menu li a:hover {
+.navbar.active .menu li a:hover {
     color: var(--color_05);
 }
 
@@ -1001,6 +1005,7 @@ footer .copy {
 
 @media (max-width: 690px) {
     .navbar .menu {
+        display: none;
         position: fixed;
         height: 100vh;
         width: 100%;
@@ -1008,13 +1013,15 @@ footer .copy {
         top: 0;
         background: var(--color_02_opacity);
         backdrop-filter: blur(1rem);
-        text-align: center;
-        padding-top: 80px;
-        transition: all 0.3s ease;
+        transition: all .3s ease;
     }   
 
     .navbar .menu.active {
         left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .navbar .menu li {
@@ -1022,8 +1029,7 @@ footer .copy {
     }
 
     .navbar .menu li a {
-        display: inline-block;
-        margin: 20px 0;
+        display: flex;
         font-size: 25px;
     }
 
