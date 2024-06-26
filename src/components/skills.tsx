@@ -14,7 +14,7 @@ const Skills: React.FC = () => {
                             desafios de desenvolvimento, desde a criação de interfaces atraentes até a implementação de
                             funcionalidades complexas no back-end. Estou sempre buscando aprender e me adaptar às novas
                             tecnologias para entregar soluções de alta qualidade.</p>
-                        <a href="#">Mais informação</a>
+                        <a href="#contact">Mais informação</a>
                     </div>
                     <div className="column right">
                         <div className="bars">

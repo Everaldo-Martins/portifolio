@@ -1,7 +1,43 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import profile from '../assets/images/profile-1.jpg';
 
 const About: React.FC = () => {
+    const texts = ["Estudante", "Web Designer", "Desenvolvedor", "Técnico em Informática"];
+    const speed = 200;
+    let currentIndex = 0;
+    let charIndex = 0;
+    const typing2Ref = useRef<HTMLSpanElement>(null);
+
+    useEffect(() => {
+        const typingElement = typing2Ref.current;
+        if (!typingElement) return;
+
+        function typeWriter() {
+            if (typingElement) {
+                if (charIndex < texts[currentIndex].length) {
+                    typingElement.textContent += texts[currentIndex][charIndex++];
+                    setTimeout(typeWriter, speed);
+                } else {
+                    setTimeout(eraseWriter, speed + 1000);
+                }
+            }
+        }
+
+        function eraseWriter() {
+            if (typingElement) {
+                if (charIndex > 0) {
+                    typingElement.textContent = typingElement.textContent?.slice(0, -1) || "";
+                    charIndex--;
+                    setTimeout(eraseWriter, speed / 2);
+                } else {
+                    currentIndex = (currentIndex + 1) % texts.length;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+        }
+
+        typeWriter();
+    }, []);
     return (
         <section className="about" id="about">
             <div className="max-width">
@@ -11,7 +47,7 @@ const About: React.FC = () => {
                         <img src={profile} alt="Imagem de Perfil"/>
                     </div>
                     <div className="column right">
-                        <div className="text">Sou Everaldo, um <span className="typing-2"></span></div>
+                        <div className="text">Sou Everaldo, um <span className="typing-2" ref={typing2Ref}></span></div>
                         <p>Sou um entusiasta da tecnologia apaixonado por programação e desenvolvimento de software. Com
                             habilidades em HTML, CSS, JavaScript, Node.js, Flutter, PHP, C, Java e Python, estou
                             constantemente explorando novas tecnologias e aprimorando minhas habilidades para enfrentar

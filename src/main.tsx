@@ -8,6 +8,7 @@ import Experience from './components/experience.tsx'
 import Skills from './components/skills.tsx'
 import Teams from './components/teams.tsx'
 import Contact from './components/contact.tsx'
+import Footer from './components/footer.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -20,5 +21,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Teams />
       <Contact />
     </main>
+    <Footer />
   </React.StrictMode>,
 )
