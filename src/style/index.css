@@ -55,22 +55,22 @@ table {
 /* Standard colors */
 :root {
     /* Solid colors */
-    --black: #111111;
-    --lowblack: #222222;
-    --minblack: #252525;
-    --silver: #f0f0f0;
-    --orange: #ff5400;
+    --color_01: #111111;
+    --color_02: #222222;
+    --color_03: #252525;
+    --color_04: #f0f0f0;
+    --color_05: #ff0000;
 
     /* Excetion colors */
     --erro: #ff0000;
     --sucess: #008000;
 
     /* Opacity colors */
-    --black_opacity: rgba(17, 17, 17, 0.8);
-    --lowblack_opacity: rgba(34, 34, 34, 0.8);
-    --minblack_opacity: rgba(37, 37, 37, 0.8);
-    --silver_opacity: rgba(240, 240, 240, 0.8);
-    --orange_opacity: rgba(255, 85, 0, 0.8);
+    --color_01_opacity: #111111cc;
+    --color_02_opacity: #222222cc;
+    --color_03_opacity: #252525cc;
+    --color_04_opacity: #f0f0f0cc;
+    --color_05_opacity: #ff5500cc;
 }
 
 html {
@@ -78,7 +78,7 @@ html {
 }
 
 html, body {
-    scrollbar-color: var(--orange) var(--minblack);
+    scrollbar-color: var(--color_05) var(--color_03);
     scrollbar-gutter: 5px;
     scrollbar-width: thin;
 }
@@ -89,20 +89,20 @@ html, body {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--minblack);
+    background: var(--color_03);
 }
 
 ::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    background: var(--orange);
+    background: var(--color_05);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--orange_opacity);
+    background: var(--color_05_opacity);
 }
 
 body {
-    background-color: var(--silver_opacity);    
+    background-color: var(--color_04_opacity);    
 }
 
 /* all similar content styling codes */
@@ -154,7 +154,7 @@ section .title::before {
     left: 50%;
     width: 180px;
     height: 3px;
-    background: var(--silver);
+    background: var(--color_04);
     transform: translateX(-50%);
 }
 
@@ -163,9 +163,9 @@ section .title::after {
     bottom: -8px;
     left: 50%;
     font-size: 20px;
-    color: var(--orange);
+    color: var(--color_05);
     padding: 0 5px;
-    background: var(--silver);
+    background: var(--color_04);
     transform: translateX(-50%);
 }
 
@@ -184,7 +184,7 @@ section .title::after {
 
 .navbar.sticky {
     padding: 15px 0;
-    background: var(--lowblack_opacity);
+    background: var(--color_02_opacity);
     backdrop-filter: blur(1rem);
 }
 
@@ -199,18 +199,18 @@ section .title::after {
 }
 
 .navbar .logo a {
-    color: var(--silver);
+    color: var(--color_04);
     font-size: 35px;
     font-weight: 600;
 }
 
 .navbar .logo a span {
-    color: var(--orange);
+    color: var(--color_05);
     transition: all 0.3s ease;
 }
 
 .navbar.sticky .logo a span {
-    color: var(--silver);
+    color: var(--color_04);
 }
 
 .navbar .menu li {
@@ -220,7 +220,7 @@ section .title::after {
 
 .navbar .menu li a {
     display: block;
-    color: var(--silver);
+    color: var(--color_04);
     font-size: 14px;
     font-weight: 300;
     margin: 0 0 0 25px;
@@ -228,16 +228,16 @@ section .title::after {
 }
 
 .navbar .menu li a:hover {
-    color: var(--orange);
+    color: var(--color_05);
 }
 
 .navbar.sticky .menu li a:hover {
-    color: var(--orange);
+    color: var(--color_05);
 }
 
 /* menu btn styling */
 .menu-btn {
-    color: var(--silver);
+    color: var(--color_04);
     padding: auto 10px auto auto;
     font-size: 26px;
     cursor: pointer;
@@ -249,12 +249,12 @@ section .title::after {
     position: fixed;
     height: 45px;
     width: 42px;
-    background: var(--orange);
+    background: var(--color_05);
     right: 30px;
     bottom: 10px;
     text-align: center;
     line-height: 45px;
-    color: var(--silver);
+    color: var(--color_04);
     z-index: 9999;
     font-size: 30px;
     border-radius: 6px;
@@ -266,7 +266,7 @@ section .title::after {
 }
 
 .scroll-up a {
-    color: var(--silver);
+    color: var(--color_04);
     text-decoration: none;
 }
 
@@ -282,13 +282,13 @@ section .title::after {
 
 /* home section styling */
 .home {    
-    background: var(--black) url("../assets/images/banner.jpg");
+    background: var(--color_01) url("../assets/images/banner.jpg");
     background-repeat: no-repeat;
     background-position: left;
     background-size: cover;
     background-attachment: fixed; 
     background-origin: border-box;   
-    color: var(--silver);
+    color: var(--color_04);
     display: flex;
     height: 100vh;
     min-height: 500px;    
@@ -323,14 +323,14 @@ section .title::after {
 }
 
 .home .home-content .text-3 span {
-    color: var(--orange);
+    color: var(--color_05);
     font-weight: 500;    
 }
 
 .home .home-content a {
     display: inline-block;
-    background: var(--orange);
-    color: var(--silver);
+    background: var(--color_05);
+    color: var(--color_04);
     font-size: 1.4rem;
     padding: 12px 36px;
     margin-top: 20px;
@@ -338,12 +338,12 @@ section .title::after {
     border-radius: 6px;
     border-width: 2px;
     border-style: solid;
-    border-color: var(--orange);
+    border-color: var(--color_05);
     transition: all 0.3s ease;
 }
 
 .home .home-content a:hover {
-    color: var(--orange);
+    color: var(--color_05);
     background: none;
 }
 
@@ -361,18 +361,18 @@ section .title::after {
 
 .social .fa,
 .social .fab {
-    background-color: var(--minblack);
+    background-color: var(--color_03);
     width: 25px;
     font-size: 1.2rem;
     padding: 0.5rem;
-    color: var(--orange);
+    color: var(--color_05);
     text-align: center;
     text-decoration: none;
     margin: 0 0 1rem 1rem;
     outline: none;
     border: none;
     border-radius: 0.2rem;
-    box-shadow: 0 2px 4px var(--minblack_opacity);
+    box-shadow: 0 2px 4px var(--color_03_opacity);
     position: relative;
     float: left;
     transition: all 0.2s ease 0.1s;
@@ -391,8 +391,8 @@ section .title::after {
     font-style: normal;
     font-size: 0.8rem;
     visibility: hidden;
-    background-color: var(--minblack);
-    color: var(--orange);
+    background-color: var(--color_03);
+    color: var(--color_05);
     text-align: center;
     border-radius: 6px;
     padding: 0.7rem 0.8rem 0.6rem 0.8rem;
@@ -412,12 +412,12 @@ section .title::after {
     margin-top: -4px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent var(--minblack) transparent transparent;
+    border-color: transparent var(--color_03) transparent transparent;
 }
 
 .social .fa:hover .tooltip,
 .social .fab:hover .tooltip {
-    color: var(--orange);
+    color: var(--color_05);
     visibility: visible;
 }
 
@@ -448,7 +448,7 @@ section .title::after {
 }
 
 .about .about-content .right .text span {
-    color: var(--orange);
+    color: var(--color_05);
 }
 
 .about .about-content .right p {
@@ -460,45 +460,45 @@ section .title::after {
 
 .about .about-content .right a {
     display: inline-block;
-    background: var(--orange);
-    color: var(--silver);
+    background: var(--color_05);
+    color: var(--color_04);
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid var(--orange);
+    border: 2px solid var(--color_05);
     transition: all 0.3s ease;
 }
 
 .about .about-content .right a:hover {
-    color: var(--orange);
+    color: var(--color_05);
     background: none;
 }
 
 /* experience section styling */
 .experience,
 .teams {
-    color: var(--silver);
-    background: var(--black);
+    color: var(--color_04);
+    background: var(--color_01);
 }
 
 .experience .title::before,
 .teams .title::before {
-    background: var(--silver);
+    background: var(--color_04);
     padding: 0 15px;
 }
 
 .experience .title::after,
 .teams .title::after {
     width: 100%;
-    background: var(--black);
+    background: var(--color_01);
     content: "o que eu forneço";
 }
 
 .experience .exp-content .card {
     width: calc(33% - 50px);
-    background: var(--minblack);
+    background: var(--color_03);
     text-align: center;
     border-radius: 6px;
     padding: 100px 25px;
@@ -507,7 +507,7 @@ section .title::after {
 }
 
 .experience .exp-content .card:hover {
-    background: var(--orange);
+    background: var(--color_05);
 }
 
 .experience .exp-content .card .box {
@@ -520,12 +520,12 @@ section .title::after {
 
 .experience .exp-content .card i {
     font-size: 56px;
-    color: var(--orange);
+    color: var(--color_05);
     transition: color 0.3s ease;
 }
 
 .experience .exp-content .card:hover i {
-    color: var(--silver);
+    color: var(--color_04);
 }
 
 .experience .exp-content .card .text {
@@ -557,19 +557,19 @@ section .title::after {
 
 .skills .skills-content .left a {
     display: inline-block;
-    background: var(--orange);
-    color: var(--silver);
+    background: var(--color_05);
+    color: var(--color_04);
     font-size: 18px;
     font-weight: 500;
     padding: 8px 16px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid var(--orange);
+    border: 2px solid var(--color_05);
     transition: all 0.3s ease;
 }
 
 .skills .skills-content .left a:hover {
-    color: var(--orange);
+    color: var(--color_05);
     background: none;
 }
 
@@ -592,7 +592,7 @@ section .title::after {
 .skills .skills-content .right .line {
     height: 5px;
     width: 100%;
-    background: var(--silver);
+    background: var(--color_04);
     position: relative;
 }
 
@@ -602,7 +602,7 @@ section .title::after {
     height: 100%;
     left: 0;
     top: 0;
-    background: var(--orange);
+    background: var(--color_05);
 }
 
 .skills-content .right .html::before {
@@ -652,9 +652,9 @@ section .title::after {
     position: absolute;
     text-align: center;
     line-height: 50px;
-    background: var(--orange);
+    background: var(--color_05);
     border-radius: 50%;
-    box-shadow: 0 3px 6px var(--black_opacity);
+    box-shadow: 0 3px 6px var(--color_01_opacity);
     transform: translateY(-50%);
     transition: transform 0.1s linear;
 }
@@ -711,7 +711,7 @@ section .title::after {
     scroll-snap-align: start;
     height: 342px;
     list-style: none;
-    background: var(--lowblack);
+    background: var(--color_02);
     cursor: pointer;
     padding-bottom: 15px;
     flex-direction: column;
@@ -719,11 +719,11 @@ section .title::after {
 }
 
 .teams .carousel .card:hover {
-    background: var(--orange);
+    background: var(--color_05);
 }
 
 .teams .carousel .card .img {
-    background: var(--orange);
+    background: var(--color_05);
     height: 148px;
     width: 148px;
     border-radius: 50%;
@@ -744,7 +744,7 @@ section .title::after {
 }
 
 .teams .carousel .card span {
-    color: var(--silver);
+    color: var(--color_04);
     font-size: 1.21rem;
 }
 
@@ -790,7 +790,7 @@ section .title::after {
 
 .contact .contact-content .row i {
     font-size: 25px;
-    color: var(--orange);
+    color: var(--color_05);
 }
 
 .contact .contact-content .info .head {
@@ -798,7 +798,7 @@ section .title::after {
 }
 
 .contact .contact-content .info .sub-title {
-    color: var(--lowblack);
+    color: var(--color_02);
 }
 
 .contact .right form .fields {
@@ -841,7 +841,7 @@ section .title::after {
 
 .contact .right form .field input:focus,
 .contact .right form .textarea textarea:focus {
-    border-color: var(--orange);
+    border-color: var(--color_05);
 }
 
 .contact .right form .textarea textarea {
@@ -856,7 +856,7 @@ section .title::after {
 }
 
 .right form .button-area button {
-    color: var(--silver);
+    color: var(--color_04);
     display: block;
     width: 160px !important;
     height: 45px;
@@ -866,15 +866,15 @@ section .title::after {
     border-radius: 6px;
     cursor: pointer;
     flex-wrap: nowrap;
-    background: var(--orange);
+    background: var(--color_05);
     border-width: 2px;
     border-style: solid;
-    border-color: var(--orange);
+    border-color: var(--color_05);
     transition: all 0.3s ease;
 }
 
 .right form .button-area button:hover {
-    color: var(--orange);
+    color: var(--color_05);
     background: none;
 }
 
@@ -904,9 +904,9 @@ section .title::after {
 
 /* footer section styling */
 footer {
-    background: var(--black);
+    background: var(--color_01);
     padding: 15px 23px;
-    color: var(--silver);
+    color: var(--color_04);
     text-align: center;
 }
 
@@ -916,7 +916,7 @@ footer .copy {
     font-weight: 300;
     font-style: normal;
     font-size: 0.8rem;
-    color: var(--silver);
+    color: var(--color_04);
 }
 
 /* responsive media query start */
@@ -936,7 +936,7 @@ footer .copy {
 @media (max-width: 947px) {
     .navbar .menu li a {
         display: block;
-        color: var(--silver);
+        color: var(--color_04);
         font-size: 14px;
         font-weight: 300;
         margin: 0 0 0 12px;
@@ -991,7 +991,7 @@ footer .copy {
 
     .contact .contact-content .info .sub-title {
         font-size: 14px;
-        color: var(--lowblack);
+        color: var(--color_02);
     }
 
     .teams .wrapper .carousel {
@@ -1006,7 +1006,7 @@ footer .copy {
         width: 100%;
         left: -100%;
         top: 0;
-        background: var(--lowblack_opacity);
+        background: var(--color_02_opacity);
         backdrop-filter: blur(1rem);
         text-align: center;
         padding-top: 80px;
@@ -1033,7 +1033,7 @@ footer .copy {
     }
 
     .active + .menu-btn:before {
-        color: var(--orange);
+        color: var(--color_05);
         content: "\f00d";
     }
 
@@ -1068,7 +1068,7 @@ footer .copy {
 
 @media (max-width: 500px) {
     .home {
-        background: var(--lowblack) url('../assets/images/banner-mobile.jpg');
+        background: var(--color_02) url('../assets/images/banner-mobile.jpg');
         background-repeat: no-repeat;        
         background-position: right;
         background-size: cover;
