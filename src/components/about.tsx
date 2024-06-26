@@ -3,7 +3,7 @@ import profile from '../assets/images/profile-1.jpg';
 
 const About: React.FC = () => {
     const texts = ["Estudante", "Web Designer", "Desenvolvedor", "Técnico em Informática"];
-    const speed = 200;
+    const speed = 300;
     let currentIndex = 0;
     let charIndex = 0;
     const typing2Ref = useRef<HTMLSpanElement>(null);

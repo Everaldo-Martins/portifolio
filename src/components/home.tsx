@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 const Home: React.FC = () => {
     const texts = ["Estudante", "Web Designer", "Desenvolvedor", "Técnico em Informática"];
-    const speed = 200;
+    const speed = 300;
     let currentIndex = 0;
     let charIndex = 0;
     const typingRef = useRef<HTMLSpanElement>(null);
