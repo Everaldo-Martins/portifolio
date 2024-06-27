@@ -271,7 +271,7 @@ section .title::after {
 
 /* home section styling */
 .home {    
-    background: var(--color_01) url("../images/banner.jpg");
+    background: var(--color_01) url("../assets/images/banner.jpg");
     background-repeat: no-repeat;
     background-position: left;
     background-size: cover;
@@ -997,7 +997,7 @@ footer .copy {
         left: -100%;
         top: 0;
         background: var(--color_02_opacity);
-        backdrop-filter: blur(1rem);
+        backdrop-filter: blur(1.5rem);
         transition: all .3s ease;
     }   
 
@@ -1019,7 +1019,8 @@ footer .copy {
     }
 
     .menu-btn {
-        display: block;
+        font-size: 28px;
+        display: flex;
         z-index: 999;
     }
 
@@ -1059,7 +1060,7 @@ footer .copy {
 
 @media (max-width: 500px) {
     .home {
-        background: var(--color_02) url('../images/banner-mobile.jpg');
+        background: var(--color_02) url('../assets/images/banner-mobile.jpg');
         background-repeat: no-repeat;        
         background-position: right;
         background-size: cover;
@@ -1075,7 +1076,7 @@ footer .copy {
     }
 
     .home .home-content .text-2 {
-        font-size: 50px;
+        font-size: 42px;
     }
 
     .home .home-content .text-3 {
