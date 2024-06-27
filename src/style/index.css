@@ -169,21 +169,16 @@ section .title::after {
     transform: translateX(-50%);
 }
 
-/* navbar styling */
 .navbar {
     position: fixed;
-    width: 100%;
-    z-index: 999;
+    width: 100%;    
     padding: 20px 0;
-    font-family: "Comfortaa", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
     transition: all 0.3s ease;
+    z-index: 998;
 }
 
 .navbar.sticky {
-    padding: 15px 0;
+    padding: 20px 0;
     background-color: var(--color_01_opacity);
     backdrop-filter: blur(1.5rem);
 }
@@ -192,6 +187,8 @@ section .title::after {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1300px;
+    margin: auto;
 }
 
 .navbar .logo img {
@@ -203,26 +200,45 @@ section .title::after {
     list-style: none;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    gap: 0;
+    gap: 20px;
+}
+
+.navbar .menu li {
+    position: relative;
 }
 
 .navbar .menu li a {
-    display: flex;
-    color: var(--color_04);
+    font-family: "Comfortaa", sans-serif;
     font-size: .8rem;
-    font-weight: 300;
-    padding: 20px;
-    transition: all .1s ease .3s;
+    font-weight: 400;
+    color: var(--color_04);
+    padding: 20px 5px;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .navbar .menu li a:hover {
-    text-shadow: 0 1px 2px var(--color_03_opacity);
     color: var(--color_05);
 }
 
-.navbar.active .menu li a:hover {
-    color: var(--color_05);
+.navbar .menu li a::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    padding: 3px 0;
+    border-bottom: 2px solid var(--color_05);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s ease;
+}
+
+.navbar .menu li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 /* menu btn styling */
@@ -960,12 +976,15 @@ footer .copy {
 
 @media (max-width: 947px) {
     .navbar .menu li a {
-        display: block;
+        display: flex;
+        padding: 10px 2px;
         color: var(--color_04);
-        font-size: 14px;
-        font-weight: 300;
-        margin: 0 0 0 12px;
         transition: color 0.3s ease;
+    }
+
+    .navbar .menu li a::after {
+        height: 1px;
+        padding: 5px 0;
     }
 
     .home .home-content .text-2 {
