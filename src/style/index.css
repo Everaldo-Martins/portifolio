@@ -59,7 +59,7 @@ table {
     --color_02: #222222;
     --color_03: #252525;
     --color_04: #f0f0f0;
-    --color_05: #ff0000;
+    --color_05: #00d5ff;
 
     /* Excetion colors */
     --erro: #ff0000;
@@ -70,7 +70,7 @@ table {
     --color_02_opacity: #222222cc;
     --color_03_opacity: #252525cc;
     --color_04_opacity: #f0f0f0cc;
-    --color_05_opacity: #ff5500cc;
+    --color_05_opacity: #00d5ffcc;
 }
 
 html {
