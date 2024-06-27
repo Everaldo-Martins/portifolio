@@ -14,7 +14,7 @@ const Skills: React.FC = () => {
                             desafios de desenvolvimento, desde a criação de interfaces atraentes até a implementação de
                             funcionalidades complexas no back-end. Estou sempre buscando aprender e me adaptar às novas
                             tecnologias para entregar soluções de alta qualidade.</p>
-                        <a href="#contact">Mais informação</a>
+                        <a href="#contact"> Mais informação</a>
                     </div>
                     <div className="column right">
                         <div className="bars">
@@ -48,14 +48,14 @@ const Skills: React.FC = () => {
                         <div className="bars">
                             <div className="info">
                                 <span>React</span>
-                                <span>65%</span>
+                                <span>75%</span>
                             </div>
                             <div className="line react"></div>
                         </div>
                         <div className="bars">
                             <div className="info">
                                 <span>Flutter</span>
-                                <span>50%</span>
+                                <span>70%</span>
                             </div>
                             <div className="line flutter"></div>
                         </div>

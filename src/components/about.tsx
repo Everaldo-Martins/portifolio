@@ -63,7 +63,7 @@ const About: React.FC = () => {
                             participação ativa na comissão de licitações. Estou disponível para viagens e aberto a novas
                             oportunidades que me permitam continuar crescendo profissionalmente e contribuindo para o
                             avanço da tecnologia.</p>
-                        <a target="_blank" href="/downloads/CV-Everaldo.txt">Download CV</a>
+                        <a target="_blank" href="/downloads/CV-Everaldo.txt"> Download CV</a>
                     </div>
                 </div>
             </div>

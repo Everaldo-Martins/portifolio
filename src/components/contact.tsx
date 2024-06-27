@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
                                 <textarea name="message" cols={30} rows={10} placeholder="Mensagem" required></textarea>
                             </div>
                             <div className="button-area">
-                                <button type="submit" id="my-form-button">Enviar</button>
+                                <button type="submit" id="my-form-button"> Enviar</button>
                             </div>
                         </form>
                     </div>

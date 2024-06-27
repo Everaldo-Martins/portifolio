@@ -60,7 +60,7 @@ const Home: React.FC = () => {
                         <div className="text-1">Olá, meu nome é</div>
                         <div className="text-2">Everaldo Martins</div>
                         <div className="text-3">E eu sou <span className="typing" ref={typingRef}></span></div>
-                        <a href="#contact">Contrate-me</a>
+                        <a href="#contact"> Contrate-me</a>
                     </div>
                 </div>
             </section>
