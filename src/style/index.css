@@ -480,30 +480,28 @@ section .title::after {
 }
 
 /* experience section styling */
-.experience,
-.teams {
+.experience {
     color: var(--color_04);
     background: var(--color_01);
 }
 
-.experience .title::before,
-.teams .title::before {
+.experience .title::before {
     background: var(--color_04);
     padding: 0 15px;
 }
 
-.experience .title::after,
-.teams .title::after {
+.experience .title::after {
     width: 100%;
     background: var(--color_01);
     content: "O que forneço!";
 }
 
 .experience .exp-content .card {
-    width: calc(33% - 50px);
+    width: calc(33% - 60px);
     background: var(--color_03);
     text-align: center;
     border-radius: 6px;
+    margin: 0 5px;
     padding: 100px 25px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -645,7 +643,19 @@ section .title::after {
 }
 
 /* teams section styling */
+.teams {
+    color: var(--color_04);
+    background: var(--color_01);
+}
+
+.teams .title::before {
+    background: var(--color_04);
+    padding: 0 15px;
+}
+
 .teams .title::after {
+    width: 100%;
+    background: var(--color_01);    
     content: "Quem está comigo!";
 }
 
