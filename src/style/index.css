@@ -174,7 +174,7 @@ section .title::after {
     position: fixed;
     width: 100%;
     z-index: 999;
-    padding: 30px 0;
+    padding: 20px 0;
     font-family: "Comfortaa", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -196,21 +196,6 @@ section .title::after {
 
 .navbar .logo img {
     height: 40px;
-}
-
-.navbar .logo a {
-    color: var(--color_04);
-    font-size: 35px;
-    font-weight: 600;
-}
-
-.navbar .logo a span {
-    color: var(--color_05);
-    transition: all 0.3s ease;
-}
-
-.navbar.sticky .logo a span {
-    color: var(--color_04);
 }
 
 .navbar .menu {
@@ -286,7 +271,7 @@ section .title::after {
 
 /* home section styling */
 .home {    
-    background: var(--color_01) url("../assets/images/banner.jpg");
+    background: var(--color_01) url("../images/banner.jpg");
     background-repeat: no-repeat;
     background-position: left;
     background-size: cover;
@@ -427,7 +412,7 @@ section .title::after {
 
 /* about section styling */
 .about .title::after {
-    content: "Quem eu sou";
+    content: "Quem sou!";
 }
 
 .about .about-content .left {
@@ -497,7 +482,7 @@ section .title::after {
 .teams .title::after {
     width: 100%;
     background: var(--color_01);
-    content: "o que eu forneço";
+    content: "O que forneço!";
 }
 
 .experience .exp-content .card {
@@ -541,7 +526,7 @@ section .title::after {
 /* skills section styling */
 
 .skills .title::after {
-    content: "O que eu sei";
+    content: "O que aprendi!";
 }
 
 .skills .skills-content .column {
@@ -639,7 +624,7 @@ section .title::after {
 
 /* teams section styling */
 .teams .title::after {
-    content: "Quem está comigo";
+    content: "Quem está comigo!";
 }
 
 .teams .wrapper {
@@ -754,8 +739,8 @@ section .title::after {
 
 /* contact section styling */
 .contact .title::after {
-    width: 100%;
-    content: "Entre em contato";
+    width: 150px;
+    content: "Contate-me!";
 }
 
 .contact .contact-content .column {
@@ -1074,7 +1059,7 @@ footer .copy {
 
 @media (max-width: 500px) {
     .home {
-        background: var(--color_02) url('../assets/images/banner-mobile.jpg');
+        background: var(--color_02) url('../images/banner-mobile.jpg');
         background-repeat: no-repeat;        
         background-position: right;
         background-size: cover;

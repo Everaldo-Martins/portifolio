@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
     return (
         <section className="contact" id="contact">
             <div className="max-width">
-                <h2 className="title">Contate-me</h2>
+                <h2 className="title">Meus contatos</h2>
                 <div className="contact-content">
                     <div className="column left">
                         <div className="text">Entre em contato</div>
