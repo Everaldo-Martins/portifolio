@@ -184,8 +184,8 @@ section .title::after {
 
 .navbar.sticky {
     padding: 15px 0;
-    background: var(--color_02_opacity);
-    backdrop-filter: blur(1rem);
+    background-color: var(--color_01_opacity);
+    backdrop-filter: blur(1.5rem);
 }
 
 .navbar .max-width {
@@ -204,19 +204,20 @@ section .title::after {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 0px;
+    gap: 0;
 }
 
 .navbar .menu li a {
     display: flex;
     color: var(--color_04);
-    font-size: 14px;
+    font-size: .8rem;
     font-weight: 300;
     padding: 20px;
     transition: all .1s ease .3s;
 }
 
 .navbar .menu li a:hover {
+    text-shadow: 0 1px 2px var(--color_03_opacity);
     color: var(--color_05);
 }
 

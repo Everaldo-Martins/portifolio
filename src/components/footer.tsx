@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
         const handleScroll = () => {
             const sticky = document.querySelector('.navbar') as HTMLElement;
             const scrollUp = document.querySelector('.scroll-up') as HTMLElement;
-            
+
             if (sticky) {
                 if (window.scrollY > 20) {
                     sticky.classList.add('sticky');
@@ -13,14 +13,14 @@ const Footer: React.FC = () => {
                     sticky.classList.remove('sticky');
                 }
             }
-            
+
             if (scrollUp) {
                 if (window.scrollY > 500) {
                     scrollUp.classList.add('show');
                 } else {
                     scrollUp.classList.remove('show');
                 }
-                
+
                 scrollUp.onclick = () => {
                     document.body.scrollTop = 0;
                     document.documentElement.scrollTop = 0;
@@ -42,6 +42,9 @@ const Footer: React.FC = () => {
 
     return (
         <footer>
+            <div className="scroll-up">
+                <i className="fas fa-angle-up"></i>
+            </div>
             <span className="copy"></span>
         </footer>
     );

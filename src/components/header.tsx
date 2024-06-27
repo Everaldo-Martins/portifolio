@@ -3,10 +3,7 @@ import Menu from './menu.tsx';
 
 const Header: React.FC = () => {
   return (
-    <header>
-        <div className="scroll-up">
-            <i className="fas fa-angle-up"></i>
-        </div>
+    <header>        
         <Menu />
     </header>
   );
