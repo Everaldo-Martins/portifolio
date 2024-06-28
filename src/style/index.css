@@ -212,7 +212,7 @@ section .title::after {
     color: var(--color_04);
     padding: 20px 5px;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color .5s ease;
 }
 
 .navbar .menu li a:hover {
@@ -231,7 +231,7 @@ section .title::after {
     border-bottom: 2px solid var(--color_05);
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform .4s ease;
+    transition: transform .5s ease;
 }
 
 .navbar .menu li a:hover::after {
