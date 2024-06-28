@@ -73,7 +73,7 @@ A estrutura básica de diretórios do projeto é a seguinte:
 5. **Abra o navegador e acesse `http://localhost:5173`.**
 
 ## Teste o Projeto
-Para testar o projeto, abra o navegador e acesse o endereço local onde o servidor de desenvolvimento está rodando.
+Para testar o projeto, abra o navegador e acesse o endereço [aqui](https://everaldo-martins.github.io/portifolio/) onde o servidor de desenvolvimento está rodando.
 
 ## Licença
 Este projeto está licenciado sob a [MIT License](LICENSE).
