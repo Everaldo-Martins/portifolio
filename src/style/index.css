@@ -187,8 +187,6 @@ section .title::after {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1300px;
-    margin: auto;
 }
 
 .navbar .logo img {
