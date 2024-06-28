@@ -6,8 +6,8 @@ const Skills: React.FC = () => {
             <div className="max-width">
                 <h2 className="title">Minhas habilidades</h2>
                 <div className="skills-content">
-                    <div className="column left">
-                        <div className="text">Minhas habilidades e experiências.</div>
+                    <div className="column">
+                        <h1 className="text">Minhas habilidades e experiências.</h1>
                         <p>Tenho uma sólida experiência em desenvolvimento web e mobile, abrangendo diversas tecnologias
                             e linguagens de programação. Ao longo da minha trajetória, desenvolvi habilidades em várias
                             áreas. Meu conjunto diversificado de habilidades me permite enfrentar uma ampla gama de
@@ -16,7 +16,7 @@ const Skills: React.FC = () => {
                             tecnologias para entregar soluções de alta qualidade.</p>
                         <a href="#contact"> Mais informação</a>
                     </div>
-                    <div className="column right">
+                    <div className="column">
                         <div className="bars">
                             <div className="info">
                                 <span>HTML</span>
