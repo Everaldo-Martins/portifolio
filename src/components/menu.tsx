@@ -19,7 +19,7 @@ const Menu: React.FC = () => {
         <nav className="navbar">
             <div className="max-width">
                 <div className="logo">
-                    <a href="/"><img src={logo} alt="EMD" /></a>
+                    <a href="./"><img src={logo} alt="EMD" /></a>
                 </div>
                 <ul className="menu">
                     <li><a href="#home">Home</a></li>
