@@ -7,6 +7,10 @@ const Menu: React.FC = () => {
         const menu = document.querySelector('.menu');
 
         if (menuBtn && menu) {
+            menuBtn.addEventListener('click', () => {
+                menu.classList.toggle('active');
+            });
+            
             return () => {
                 menuBtn.addEventListener('click', () => {
                     menu.classList.toggle('active');
