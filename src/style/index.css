@@ -1122,7 +1122,7 @@ footer .copy {
         transition: all .4s ease;
         color: var(--color_05);
         content: "\f00d";
-    }
+    }    
 
     .max-width {
         padding: 0 23px;
@@ -1154,6 +1154,14 @@ footer .copy {
 }
 
 @media (max-width: 500px) {
+    .navbar .logo img {
+        height: 40px;
+        position: absolute;
+        left: 15px;
+        top: 20px;
+        z-index: 999;
+    }
+
     .home {
         background: var(--color_02) url('../assets/images/banner-mobile.jpg');
         background-attachment: scroll;
