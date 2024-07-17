@@ -1119,6 +1119,9 @@ footer .copy {
     }
 
     .active + .menu-btn:before {
+        background-color: var(--color_02_opacity);
+        backdrop-filter: blur(1rem);
+        transition: all .4s ease;
         color: var(--color_05);
         content: "\f00d";
     }
@@ -1155,7 +1158,7 @@ footer .copy {
 @media (max-width: 500px) {
     .home {
         background: var(--color_02) url('../assets/images/banner-mobile.jpg');
-        background-attachment: fixed;
+        background-attachment: scroll;
         background-repeat: no-repeat;        
         background-position: right top;
         background-size: cover;
