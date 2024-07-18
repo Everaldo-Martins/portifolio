@@ -699,7 +699,7 @@ section .title::after {
 
 .teams .title::after {
     background: var(--color_01);    
-    content: "Quem está comigo!";
+    content: "Meu time!";
     padding: 0 5px;
 }
 
