@@ -113,7 +113,6 @@ section {
 .max-width {
     max-width: calc(100% - 160px);
     padding: 0 80px;
-    margin: auto;
 }
 
 .about, .experience, .skills, .teams, .contact, footer {
@@ -152,9 +151,8 @@ section .title::before {
     position: absolute;
     bottom: 0px;
     left: 50%;
-    width: 180px;
     height: 3px;
-    background: var(--color_04);
+    background: var(--color_05);
     transform: translateX(-50%);
 }
 
@@ -164,7 +162,6 @@ section .title::after {
     left: 50%;
     font-size: 20px;
     color: var(--color_05);
-    padding: 0 5px;
     background: var(--color_04);
     transform: translateX(-50%);
 }
@@ -212,7 +209,7 @@ section .title::after {
     color: var(--color_04);
     padding: 20px 5px;
     text-decoration: none;
-    transition: color .5s ease;
+    transition: color 0.3s ease;
 }
 
 .navbar .menu li a:hover {
@@ -231,7 +228,7 @@ section .title::after {
     border-bottom: 2px solid var(--color_05);
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform .5s ease;
+    transition: transform .4s ease;
 }
 
 .navbar .menu li a:hover::after {
@@ -239,14 +236,8 @@ section .title::after {
     transform-origin: left;
 }
 
-/* menu btn styling */
 .menu-btn {
-    color: var(--color_04);
-    padding: auto 10px auto auto;
-    font-size: 26px;
-    cursor: pointer;
     display: none;
-    transition: all 0.3s ease;
 }
 
 .scroll-up {
@@ -362,13 +353,12 @@ section .title::after {
 .home {    
     background: var(--color_01) url("../assets/images/banner.jpg");
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: left center;
     background-size: cover;
     background-attachment: fixed; 
     background-origin: border-box;   
-    color: var(--color_04);
-    display: flex;
-    height: 100vh;
+    color: var(--color_04);   
+    height: 95vh;
     min-height: 500px;    
     font-family: "Comfortaa", sans-serif;
     font-optical-sizing: auto;
@@ -376,13 +366,12 @@ section .title::after {
     font-style: normal;
 }
 
-.home .max-width {
-    width: 100%;
+.home .home-content {
+    padding: calc(60vh - 100px) 0 0 0;
     display: flex;
-}
-
-.home .max-width .row {
-    margin-right: 0;
+    flex-direction: column;
+    justify-content: left;
+    align-items: baseline;
 }
 
 .home .home-content .text-1 {
@@ -392,12 +381,10 @@ section .title::after {
 .home .home-content .text-2 {
     font-size: 75px;
     font-weight: 600;
-    margin-left: -3px;
 }
 
 .home .home-content .text-3 {
     font-size: 40px;
-    margin: 5px 0;
 }
 
 .home .home-content .text-3 span {
@@ -432,8 +419,15 @@ section .title::after {
 }
 
 /* about section styling */
+.about .title::before {
+    width: 150px;
+    background: var(--color_05);
+}
+
 .about .title::after {
+    background: var(--color_04);
     content: "Quem sou!";
+    padding: 0 5px;
 }
 
 .about .about-content .left {
@@ -498,28 +492,40 @@ section .title::after {
 .experience {
     color: var(--color_04);
     background: var(--color_01);
+    padding: 120px 0;
 }
 
 .experience .title::before {
-    background: var(--color_04);
-    padding: 0 15px;
+    width: 190px;
+    background: var(--color_05);
+    
 }
 
 .experience .title::after {
-    width: 100%;
     background: var(--color_01);
     content: "O que forneço!";
+    padding: 0 5px;
+}
+
+.experience .exp-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .experience .exp-content .card {
-    width: calc(33% - 60px);
+    flex: 3;
+    min-height: 300px;
     background: var(--color_03);
     text-align: center;
     border-radius: 6px;
-    margin: 0 5px;
-    padding: 100px 25px;
+    padding: 40px;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .experience .exp-content .card:hover {
@@ -545,33 +551,56 @@ section .title::after {
 }
 
 .experience .exp-content .card .text {
-    font-size: 25px;
+    font-size: 1.8rem;
+    line-height: 2rem;
     font-weight: 500;
     margin: 30px 0 7px 0;
 }
 
+.experience .exp-content .card p {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    text-wrap: wrap;
+    font-weight: 400;
+}
+
 /* skills section styling */
+.skills .title::before {
+    width: 190px;
+    background: var(--color_05);
+}
 
 .skills .title::after {
+    background: var(--color_04);
     content: "O que aprendi!";
+    padding: 0 5px;
 }
 
-.skills .skills-content .column {
-    width: calc(50% - 50px);
-    padding: 60px 10px;
+.skills .skills-content {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
 }
 
-.skills .skills-content .left .text {
-    font-size: 20px;
+.skills .skills-content .column {    
+    flex: 2;
+    padding: 60px 0;
+}
+
+.skills .skills-content .text {
+    font-size: 1.8rem;
+    line-height: 2rem;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
-.skills .skills-content .left p {
+.skills .skills-content p {
+    font-size: 1rem;
+    line-height: 1.3rem;
     text-align: justify;
 }
 
-.skills .skills-content .left a {
+.skills .skills-content a {
     display: inline-block;
     background: var(--color_05);
     color: var(--color_04);
@@ -587,40 +616,40 @@ section .title::after {
     transition: all .3s ease;
 }
 
-.skills .skills-content .left a::before {
+.skills .skills-content a::before {
     font-family: 'FontAwesome';
     content: '\f05a';
 }
 
-.skills .skills-content .left a:hover {
+.skills .skills-content a:hover {
     color: var(--color_05);
     background: none;
 }
 
-.skills .skills-content .right .bars {
+.skills .skills-content .bars {
     margin-bottom: 15px;
 }
 
-.skills .skills-content .right .info {
+.skills .skills-content .info {
     display: flex;
     margin-bottom: 5px;
     align-items: center;
     justify-content: space-between;
 }
 
-.skills .skills-content .right span {
+.skills .skills-content  span {
     font-weight: 500;
     font-size: 18px;
 }
 
-.skills .skills-content .right .line {
+.skills .skills-content  .line {
     height: 5px;
     width: 100%;
     background: var(--color_04);
     position: relative;
 }
 
-.skills .skills-content .right .line::before {
+.skills .skills-content  .line::before {
     content: "";
     position: absolute;
     height: 100%;
@@ -629,31 +658,31 @@ section .title::after {
     background: var(--color_05);
 }
 
-.skills-content .right .html::before {
+.skills-content  .html::before {
     width: 90%;
 }
 
-.skills-content .right .css::before {
+.skills-content  .css::before {
     width: 90%;
 }
 
-.skills-content .right .js::before {
+.skills-content  .js::before {
     width: 80%;
 }
 
-.skills-content .right .php::before {
+.skills-content  .php::before {
     width: 70%;
 }
 
-.skills-content .right .react::before {
+.skills-content  .react::before {
     width: 75%;
 }
 
-.skills-content .right .flutter::before {
+.skills-content  .flutter::before {
     width: 70%;
 }
 
-.skills-content .right .mysql::before {
+.skills-content  .mysql::before {
     width: 70%;
 }
 
@@ -661,17 +690,17 @@ section .title::after {
 .teams {
     color: var(--color_04);
     background: var(--color_01);
+    padding: 130px 0;
 }
 
 .teams .title::before {
-    background: var(--color_04);
-    padding: 0 15px;
+    width: 240px;
 }
 
 .teams .title::after {
-    width: 100%;
     background: var(--color_01);    
     content: "Quem está comigo!";
+    padding: 0 5px;
 }
 
 .teams .wrapper {
@@ -785,9 +814,15 @@ section .title::after {
 }
 
 /* contact section styling */
+.contact .title::before {
+    width: 160px;
+    background: var(--color_05);
+}
+
 .contact .title::after {
-    width: 150px;
+    background: var(--color_04);
     content: "Contate-me!";
+    padding: 0 5px;
 }
 
 .contact .contact-content .column {
@@ -960,7 +995,7 @@ footer .copy {
 
 /* responsive media query start */
 @media (max-width: 1104px) {
-    .about .about-content .left img {
+    .about .about-content  img {
         height: 350px;
         width: 350px;
     }
@@ -986,11 +1021,11 @@ footer .copy {
     }
 
     .home .home-content .text-2 {
-        font-size: 70px;
+        font-size: 50px;
     }
 
     .home .home-content .text-3 {
-        font-size: 35px;
+        font-size: 25px;
     }
 
     .home .home-content a {
@@ -1044,22 +1079,21 @@ footer .copy {
 @media (max-width: 690px) {
     .navbar .menu {
         display: none;
-        position: fixed;
         height: 100vh;
         width: 100%;
         left: -100%;
-        top: 0;
-        background: var(--color_02_opacity);
-        backdrop-filter: blur(1.5rem);
-        transition: all .3s ease;
+        top: 0;        
+        transition: all .4s ease;
     }   
 
-    .navbar .menu.active {
+    .navbar .active {
+        position: fixed;
         left: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: var(--color_01);
     }
 
     .navbar .menu li {
@@ -1072,15 +1106,23 @@ footer .copy {
     }
 
     .menu-btn {
-        font-size: 28px;
+        color: var(--color_04);
+        padding: auto 10px auto auto;
+        font-size: 26px;
+        cursor: pointer;
+        display: none;
+        transition: all 0.3s ease;
         display: flex;
         z-index: 999;
     }
 
     .active + .menu-btn:before {
+        background-color: var(--color_02_opacity);
+        backdrop-filter: blur(1rem);
+        transition: all .4s ease;
         color: var(--color_05);
         content: "\f00d";
-    }
+    }    
 
     .max-width {
         padding: 0 23px;
@@ -1112,15 +1154,20 @@ footer .copy {
 }
 
 @media (max-width: 500px) {
-    .home {
-        background: var(--color_02) url('../assets/images/banner-mobile.jpg');
-        background-repeat: no-repeat;        
-        background-position: right;
-        background-size: cover;
+    .navbar .logo img {
+        height: 40px;
+        position: absolute;
+        left: 15px;
+        top: 20px;
+        z-index: 999;
     }
 
-    .home .max-width {
-        padding: 100px 15px 0 15px;
+    .home {
+        background: var(--color_02) url('../assets/images/banner-mobile.jpg');
+        background-attachment: scroll;
+        background-repeat: no-repeat;        
+        background-position: right top;
+        background-size: cover;
     }
 
     .home .home-content .text-1 {
@@ -1146,18 +1193,24 @@ footer .copy {
         visibility: hidden;
     }
 
-    .about .about-content .right .text,
-    .skills .skills-content .left .text {
-        font-size: 19px;
+    .skills {
+        width: 100%;
+    }
+
+    .skills .max-width {
+        padding: 50px 0 0 0;
     }
 
     .experience .exp-content .card {
         width: 100%;
-        margin: 0 0 30px 0;
     }
 
     .experience .exp-content .card:last-child {
         margin: 0;
+    }
+
+    .skills .skills-content {
+        flex-direction: column;
     }
 
     .contact .right form .fields {

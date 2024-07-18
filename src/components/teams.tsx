@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import profile1 from '../assets/images/profile-1.jpg';
-import profile2 from '../assets/images/profile-2.jpeg';
-import profile3 from '../assets/images/profile-3.jpeg';
-import profile4 from '../assets/images/profile-4.jpeg';
-import profile5 from '../assets/images/profile-5.jpeg';
+import profile2 from '../assets/images/profile-2.jpg';
+import profile3 from '../assets/images/profile-3.jpg';
+import profile4 from '../assets/images/profile-4.jpg';
+import profile5 from '../assets/images/profile-5.jpg';
 
 const Teams: React.FC = () => {
     const wrapperRef = useRef<HTMLDivElement>(null);
