@@ -70,10 +70,10 @@ A estrutura básica de diretórios do projeto é a seguinte:
    ```bash
    npm run dev
    ```
-5. **Abra o navegador e acesse `http://localhost:5173`.**
+5. **Abra o navegador e acesse `http://localhost:5173/portifolio`.**
 
 ## Teste o Projeto
-Para testar o projeto, abra o navegador e acesse o endereço [aqui](https://everaldo-martins.github.io/portifolio/) onde o servidor de desenvolvimento está rodando.
+Para testar o projeto, clique [aqui](https://everaldo-martins.github.io/portifolio/).
 
 ## Licença
 Este projeto está licenciado sob a [MIT License](LICENSE).
