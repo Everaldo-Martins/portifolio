@@ -1086,14 +1086,15 @@ footer .copy {
         transition: all .4s ease;
     }   
 
-    .navbar .active {
+    .navbar .active {        
+        background-color: var(--color_02);
+        backdrop-filter: blur(1rem);
         position: fixed;
         left: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: var(--color_01);
     }
 
     .navbar .menu li {
@@ -1108,7 +1109,7 @@ footer .copy {
     .menu-btn {
         color: var(--color_04);
         padding: auto 10px auto auto;
-        font-size: 26px;
+        font-size: 28px;
         cursor: pointer;
         display: none;
         transition: all 0.3s ease;
@@ -1117,9 +1118,7 @@ footer .copy {
     }
 
     .active + .menu-btn:before {
-        background-color: var(--color_02_opacity);
-        backdrop-filter: blur(1rem);
-        transition: all .4s ease;
+        font-size: 30px;
         color: var(--color_05);
         content: "\f00d";
     }    

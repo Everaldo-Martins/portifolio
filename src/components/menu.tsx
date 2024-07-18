@@ -1,20 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import logo from '../assets/logo.svg';
 
 const Menu: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 690) {
-        setIsOpen(false);
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  const [isOpen, setIsOpen] = useState(false);  
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
