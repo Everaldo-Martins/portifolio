@@ -1,0 +1,72 @@
+
+.social {
+    width: 50px;
+    height: auto;
+    padding: 0;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 38%;
+    z-index: 99;
+}
+
+.social .fa,
+.social .fab {
+    background-color: var(--color_03);
+    width: 50px;
+    font-size: 2.1rem;
+    padding: 0.5rem;
+    color: var(--color_05);
+    text-align: center;
+    text-decoration: none;
+    margin: 0 0 1rem 1rem;
+    outline: none;
+    border: none;
+    border-radius: 0.2rem;
+    box-shadow: 0 2px 4px var(--color_03_opacity);
+    position: relative;
+    float: left;
+    transition: all 0.2s ease 0.1s;
+}
+
+.social .fa:last-child,
+.social .fab:last-child {
+    margin: 0 0 0 1rem;
+}
+
+.social .fa .tooltip,
+.social .fab .tooltip {
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    visibility: hidden;
+    background-color: var(--color_03);
+    color: var(--color_05);
+    text-align: center;
+    border-radius: 6px;
+    padding: 0.7rem 0.8rem 0.6rem 0.8rem;
+    position: absolute;
+    width: max-content;
+    top: 5px;
+    left: 120%;
+    transition: all 0.2s ease 0.1s;
+}
+
+.social .fa .tooltip::after,
+.social .fab .tooltip::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -4px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent var(--color_03) transparent transparent;
+}
+
+.social .fa:hover .tooltip,
+.social .fab:hover .tooltip {
+    color: var(--color_05);
+    visibility: visible;
+}

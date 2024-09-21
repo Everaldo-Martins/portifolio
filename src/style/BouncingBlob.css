@@ -1,0 +1,41 @@
+.blob-container {
+    background-color: var(--color_03);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.bouncing-blob {
+    width: 33vw;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    will-change: transform;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    transform-origin: left top;
+    filter: blur(2rem);
+    transition: all .5s ease;
+}
+
+.bouncing-blob--blue {
+    background: rgba(0, 98, 255, 0.8);
+}
+
+.bouncing-blob--purple {
+    background: hwb(271 0% 0% / 0.8);
+}
+
+.bouncing-blob--pink {
+    background: hwb(312 0% 0% / 0.8);
+}
+
+@media (max-width: 1024px) { 
+    .bouncing-blob {
+        width: 33vh;
+    }
+}

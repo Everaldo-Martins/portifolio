@@ -1,5 +1,6 @@
 import React from 'react';
-import Menu from './menu.tsx';
+import Menu from './Menu.tsx';
+import '../style/Header.css';
 
 const Header: React.FC = () => {
   return (

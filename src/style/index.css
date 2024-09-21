@@ -1,126 +1,16 @@
-/* Import fonts and Icons */
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
-
-/* Resete */
-a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, 
-canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, 
-fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, 
-html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, 
-p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, 
-tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
-    margin: 0;
-    padding: 0;
-    border: none;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    text-decoration: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, 
-hgroup, menu, nav, section {
-    display: block;
-}
-
-html,
-body {
-    min-height: 100vh;
-    line-height: 1;   
-}
-
-ol,
-ul {
-    list-style: none
-}
-
-blockquote,
-q {
-    quotes: none
-}
-
-blockquote:after,
-blockquote:before,
-q:after,
-q:before {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
 /* Standard colors */
-:root {
-    /* Solid colors */
-    --color_01: #111111;
-    --color_02: #222222;
-    --color_03: #252525;
-    --color_04: #f0f0f0;
-    --color_05: #00d5ff;
-
-    /* Excetion colors */
-    --erro: #ff0000;
-    --sucess: #008000;
-
-    /* Opacity colors */
-    --color_01_opacity: #111111cc;
-    --color_02_opacity: #222222cc;
-    --color_03_opacity: #252525cc;
-    --color_04_opacity: #f0f0f0cc;
-    --color_05_opacity: #00d5ffcc;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-html, body {
-    scrollbar-color: var(--color_05) var(--color_03);
-    scrollbar-gutter: 5px;
-    scrollbar-width: thin;
-}
-
-/* custom scroll bar */
-::-webkit-scrollbar {
-    width: 5px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--color_03);
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background: var(--color_05);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--color_05_opacity);
-}
-
-body {
-    background-color: var(--color_04_opacity);    
-}
-
-/* all similar content styling codes */
-section {
-    padding: 100px 0;
-}
-
 .max-width {
-    max-width: calc(100% - 160px);
-    padding: 0 80px;
+    width: 100%;
 }
 
-.about, .experience, .skills, .teams, .contact, footer {
-    font-family: "Comfortaa", sans-serif;
+.about, .experience, .skills, .teams, .contact, footer {    
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    overflow: hidden;
+}
+
+.about, .experience, .skills, .teams, .contact, .home {
+    min-height: 100dvh;
 }
 
 .about .about-content,
@@ -140,20 +30,10 @@ section .title {
     font-weight: 500;
     margin: 0 0 60px 0;
     padding: 0 0 20px 0;
-    font-family: "Comfortaa", sans-serif;
+    
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-}
-
-section .title::before {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    height: 3px;
-    background: var(--color_05);
-    transform: translateX(-50%);
 }
 
 section .title::after {
@@ -166,287 +46,29 @@ section .title::after {
     transform: translateX(-50%);
 }
 
-.navbar {
-    position: fixed;
-    width: 100%;    
-    padding: 20px 0;
-    transition: all 0.3s ease;
-    z-index: 998;
-}
 
-.navbar.sticky {
-    padding: 20px 0;
-    background-color: var(--color_01_opacity);
-    backdrop-filter: blur(1.5rem);
-}
-
-.navbar .max-width {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar .logo img {
-    height: 40px;
-}
-
-.navbar .menu {
-    display: flex;
-    list-style: none;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-}
-
-.navbar .menu li {
-    position: relative;
-}
-
-.navbar .menu li a {
-    font-family: "Comfortaa", sans-serif;
-    font-size: .8rem;
-    font-weight: 400;
-    color: var(--color_04);
-    padding: 20px 5px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.navbar .menu li a:hover {
-    color: var(--color_05);
-}
-
-.navbar .menu li a::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    padding: 3px 0;
-    border-bottom: 2px solid var(--color_05);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform .4s ease;
-}
-
-.navbar .menu li a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-.menu-btn {
-    display: none;
-}
-
-.scroll-up {
-    position: fixed;
-    height: 45px;
-    width: 42px;
-    background: var(--color_05);
-    right: 30px;
-    bottom: 10px;
-    text-align: center;
-    line-height: 45px;
-    color: var(--color_04);
-    z-index: 9999;
-    font-size: 30px;
-    border-radius: 6px;
-    border-bottom-width: 2px;
-    cursor: pointer;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
-.scroll-up a {
-    color: var(--color_04);
-    text-decoration: none;
-}
-
-.scroll-up.show {
-    bottom: 30px;
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.scroll-up:hover {
-    filter: brightness(90%);
-}
-
-/* social section styling */
-.social {
-    width: 35px;
-    height: 190px;
-    padding: 0;
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 38%;
-    z-index: 99;
-}
-
-.social .fa,
-.social .fab {
-    background-color: var(--color_03);
-    width: 25px;
-    font-size: 1.2rem;
-    padding: 0.5rem;
-    color: var(--color_05);
-    text-align: center;
-    text-decoration: none;
-    margin: 0 0 1rem 1rem;
-    outline: none;
-    border: none;
-    border-radius: 0.2rem;
-    box-shadow: 0 2px 4px var(--color_03_opacity);
-    position: relative;
-    float: left;
-    transition: all 0.2s ease 0.1s;
-}
-
-.social .fa:last-child,
-.social .fab:last-child {
-    margin: 0 0 0 1rem;
-}
-
-.social .fa .tooltip,
-.social .fab .tooltip {
-    font-family: "Comfortaa", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 0.8rem;
-    visibility: hidden;
-    background-color: var(--color_03);
-    color: var(--color_05);
-    text-align: center;
-    border-radius: 6px;
-    padding: 0.7rem 0.8rem 0.6rem 0.8rem;
-    position: absolute;
-    width: max-content;
-    top: 0;
-    left: 120%;
-    transition: all 0.2s ease 0.1s;
-}
-
-.social .fa .tooltip::after, 
-.social .fab .tooltip::after {
-    content: " ";
-    position: absolute;
-    top: 50%;
-    right: 100%;
-    margin-top: -4px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent var(--color_03) transparent transparent;
-}
-
-.social .fa:hover .tooltip,
-.social .fab:hover .tooltip {
-    color: var(--color_05);
-    visibility: visible;
-}
 
 /* home section styling */
-.home {    
-    background: var(--color_01) url("../assets/images/banner.jpg");
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: cover;
-    background-attachment: fixed; 
-    background-origin: border-box;   
-    color: var(--color_04);   
-    height: 95vh;
-    min-height: 500px;    
-    font-family: "Comfortaa", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
 
-.home .home-content {
-    padding: calc(60vh - 100px) 0 0 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: baseline;
-}
-
-.home .home-content .text-1 {
-    font-size: 27px;
-}
-
-.home .home-content .text-2 {
-    font-size: 75px;
-    font-weight: 600;
-}
-
-.home .home-content .text-3 {
-    font-size: 40px;
-}
-
-.home .home-content .text-3 span {
-    color: var(--color_05);
-    font-weight: 500;    
-}
-
-.home .home-content a {
-    display: inline-block;
-    background: var(--color_05);
-    color: var(--color_04);
-    font-size: 1.4rem;
-    padding: 12px 36px;
-    margin-top: 20px;
-    font-weight: 400;
-    border-radius: 6px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: var(--color_05);
-    cursor: pointer;
-    transition: all .3s ease;
-}
-
-.home .home-content a::before {
-    font-family: 'FontAwesome';
-    content: '\f573';
-}
-
-.home .home-content a:hover {
-    color: var(--color_05);
-    background: none;
-}
 
 /* about section styling */
-.about .title::before {
-    width: 150px;
-    background: var(--color_05);
-}
-
-.about .title::after {
-    background: var(--color_04);
-    content: "Quem sou!";
-    padding: 0 5px;
-}
-
 .about .about-content .left {
-    width: 45%;
+    width: 30%;
 }
 
 .about .about-content .left img {
-    height: 400px;
-    width: 400px;
+    width: 100%;
     object-fit: cover;
     border-radius: 6px;
 }
 
-.about .about-content .right {    
-    width: 55%;
+.about .about-content .right {  
+    padding: 0 0 0 30px;
+    width: calc(70% - 30px);
 }
 
 .about .about-content .right .text {
-    font-size: 25px;
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -456,6 +78,7 @@ section .title::after {
 }
 
 .about .about-content .right p {
+    font-size: 1.4em;
     text-align: justify;
     line-height: 125%;
     text-wrap: wrap;
@@ -495,18 +118,6 @@ section .title::after {
     padding: 120px 0;
 }
 
-.experience .title::before {
-    width: 190px;
-    background: var(--color_05);
-    
-}
-
-.experience .title::after {
-    background: var(--color_01);
-    content: "O que forneço!";
-    padding: 0 5px;
-}
-
 .experience .exp-content {
     display: flex;
     flex-wrap: wrap;
@@ -516,11 +127,10 @@ section .title::after {
 
 .experience .exp-content .card {
     flex: 3;
-    min-height: 300px;
     background: var(--color_03);
     text-align: center;
     border-radius: 6px;
-    padding: 40px;
+    padding: 16% 40px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
@@ -541,7 +151,7 @@ section .title::after {
 }
 
 .experience .exp-content .card i {
-    font-size: 56px;
+    font-size: 5em;
     color: var(--color_05);
     transition: color 0.3s ease;
 }
@@ -551,31 +161,20 @@ section .title::after {
 }
 
 .experience .exp-content .card .text {
-    font-size: 1.8rem;
-    line-height: 2rem;
+    font-size: 2em;
+    line-height: 2.4em;
     font-weight: 500;
     margin: 30px 0 7px 0;
 }
 
 .experience .exp-content .card p {
-    font-size: 1rem;
-    line-height: 1.3rem;
+    font-size: 1em;
+    line-height: 1.3em;
     text-wrap: wrap;
     font-weight: 400;
 }
 
 /* skills section styling */
-.skills .title::before {
-    width: 190px;
-    background: var(--color_05);
-}
-
-.skills .title::after {
-    background: var(--color_04);
-    content: "O que aprendi!";
-    padding: 0 5px;
-}
-
 .skills .skills-content {
     display: flex;
     flex-direction: row;
@@ -588,15 +187,15 @@ section .title::after {
 }
 
 .skills .skills-content .text {
-    font-size: 1.8rem;
-    line-height: 2rem;
+    font-size: 1.8em;
+    line-height: 2em;
     font-weight: 600;
     margin-bottom: 30px;
 }
 
 .skills .skills-content p {
-    font-size: 1rem;
-    line-height: 1.3rem;
+    font-size: 1.4em;
+    line-height: 1.6em;
     text-align: justify;
 }
 
@@ -695,12 +294,6 @@ section .title::after {
 
 .teams .title::before {
     width: 240px;
-}
-
-.teams .title::after {
-    background: var(--color_01);    
-    content: "Meu time!";
-    padding: 0 5px;
 }
 
 .teams .wrapper {
@@ -819,12 +412,6 @@ section .title::after {
     background: var(--color_05);
 }
 
-.contact .title::after {
-    background: var(--color_04);
-    content: "Contate-me!";
-    padding: 0 5px;
-}
-
 .contact .contact-content .column {
     width: calc(50% - 40px);
     padding: 20px;
@@ -900,7 +487,7 @@ section .title::after {
     outline: none;
     padding: 0 15px;
     font-size: 17px;
-    font-family: "Comfortaa", sans-serif;
+    
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -985,7 +572,7 @@ footer {
 }
 
 footer .copy {
-    font-family: "Comfortaa", sans-serif;
+    
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;

@@ -1,0 +1,13 @@
+footer {
+    padding: 15px 23px;
+    color: var(--color_04);
+    text-align: center;
+}
+
+footer .copy {    
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.8rem;
+    color: var(--color_04);
+}

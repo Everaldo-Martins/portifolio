@@ -1,0 +1,122 @@
+.navbar {
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo img {
+    max-height: 40px;
+}
+
+.navbar .menu {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar .menu li {
+    position: relative;
+}
+
+.navbar .menu li a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 10px 0;
+    color: var(--color_04);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: var(--color_05);
+}
+
+.navbar .menu li a::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    padding: 3px 0;
+    border-bottom: 2px solid var(--color_05);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s ease;
+}
+
+.navbar .menu li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.scroll-up {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: var(--color_05);
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: var(--color_04);
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up a {
+    color: var(--color_04);
+    text-decoration: none;
+}
+
+.scroll-up.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-up:hover {
+    filter: brightness(90%);
+}
+
+html, body {
+    scrollbar-color: var(--color_05) var(--color_03);
+    scrollbar-gutter: 5px;
+    scrollbar-width: thin;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color_03);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: var(--color_05);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color_05_opacity);
+}
