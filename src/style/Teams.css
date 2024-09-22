@@ -1,0 +1,125 @@
+.teams .box-content {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.teams .box-content .title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 3rem;
+    color: var(--color_05);
+}
+
+.teams .wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.teams .wrapper i {
+    background-color: var(--color_05);
+    position: absolute;
+    top: 50%;
+    padding: 10px 15px;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2rem;    
+    border-radius: 50%;
+    box-shadow: 0 3px 6px var(--color_01_opacity);   
+    transform: translateY(-50%);
+    transition: transform 0.2s linear;
+    cursor: pointer;
+}
+
+.teams .wrapper i:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.teams .wrapper i:first-child {
+    left: -22px;
+}
+
+.teams .wrapper i:last-child {
+    right: -22px;
+}
+
+.teams .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 8px;
+    scrollbar-width: none;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+
+.teams .carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.teams .carousel.no-transition,
+.teams .carousel.dragging {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+}
+
+.teams .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.teams .carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teams .carousel .card {
+    list-style: none;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--color_01_opacity);
+    color: var(--color_04);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s linear;
+    scroll-snap-align: start;
+}
+
+.teams .carousel .card:hover {
+    background-color: var(--color_05_opacity);
+    color: var(--color_01);
+}
+
+.teams .carousel .card .img {
+    width: 148px;
+    height: 148px;
+    background-color: var(--color_05);
+    border-radius: 50%;
+}
+
+.teams .card img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: none;
+}
+
+.teams .carousel .card h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.teams .carousel .card span {
+    font-size: 1.4rem;
+}

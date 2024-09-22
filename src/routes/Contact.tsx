@@ -1,106 +1,109 @@
 import React, { useEffect, useRef } from 'react';
+import '../style/Contact.css';
 
 const Contact: React.FC = () => {
     const formRef = useRef<HTMLFormElement>(null);
     const statusRef = useRef<HTMLDivElement>(null);
 
+    const setStatusMessage = (message: string, isSuccess: boolean) => {
+        if (statusRef.current) {
+            statusRef.current.innerHTML = `<p class="${isSuccess ? 'success' : 'error'}">${message}</p>`;
+        }
+    };
+
+    const handleSubmit = async (event: Event) => {
+        event.preventDefault();
+        const form = formRef.current;
+        if (!form) return;
+
+        const data = new FormData(form);
+        try {
+            const response = await fetch('https://formspree.io/f/xdoqvvyr', {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                setStatusMessage('Mensagem enviada! Obrigado por entrar em contato.', true);
+                form.reset();
+            } else {
+                const responseData = await response.json();
+                const errorMessage = responseData?.errors?.map((error: any) => error.message).join(', ') || 'Oops! Ocorreu um problema ao enviar seu formulário.';
+                setStatusMessage(errorMessage, false);
+            }
+        } catch (error) {
+            setStatusMessage('Oops! Ocorreu um problema ao enviar seu formulário.', false);
+        }
+    };
+
     useEffect(() => {
         const form = formRef.current;
-        const status = statusRef.current;
-
-        if (!form || !status) return;
-
-        const handleSubmit = async (event: Event) => {
-            event.preventDefault();
-            const data = new FormData(form);
-
-            try {
-                const response = await fetch(form.action, {
-                    method: form.method,
-                    body: data,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    status.innerHTML = "<p class=\"success\">Mensagem enviada! Obrigado por entrar em contato.</p>";
-                    form.reset();
-                } else {
-                    const responseData = await response.json();
-                    if ('errors' in responseData) {
-                        status.innerHTML = responseData.errors.map((error: any) => error.message).join(", ");
-                    } else {
-                        status.innerHTML = "<p class=\"error\">Oops! Ocorreu um problema ao enviar seu formulário.</p>";
-                    }
-                }
-            } catch (error) {
-                status.innerHTML = "<p class=\"error\">Oops! Ocorreu um problema ao enviar seu formulário.</p>";
-            }
-        };
+        if (!form) return;
 
         form.addEventListener("submit", handleSubmit as EventListener);
-
-        return () => {
-            form.removeEventListener("submit", handleSubmit as EventListener);
-        };
+        return () => form.removeEventListener("submit", handleSubmit as EventListener);
     }, []);
 
     return (
-        <section className="contact" id="contact">
-            <div className="max-width">
-                <h2 className="title">Meus contatos</h2>
-                <div className="contact-content">
-                    <div className="column left">
-                        <div className="text">Entre em contato</div>
-                        <p>Tem alguma dúvida, sugestão ou precisa de suporte? Entre em contato através de um dos métodos abaixo ou também pode preencher o formulário abaixo com sua mensagem e entraremos em contato com você. Agradeço o interesse e aguardo seu contato!</p>
-                        <div className="icons">
-                            <div className="row">
-                                <i className="fas fa-user"></i>
-                                <div className="info">
-                                    <div className="head">Nome</div>
-                                    <div className="sub-title">Everalo Martins</div>
-                                </div>
+        <section className="contact">
+            <div className="box-content">
+                <div className="contact-left">
+                    <h1 className="text">Entre em contato</h1>
+                    <div>
+                        <h3>Tem alguma dúvida, sugestão ou precisa de suporte?</h3>
+                        <p>Estamos esperando sua mensagem, não hesite em entrar em contato. Estamos aqui para ajudar! Utilize uma das formas de contato abaixo ou preencha o formulário para que possamos atendê-lo da melhor maneira possível.</p>
+                    </div>
+                    <div className="icons">
+                        <div className="row">
+                            <i className="fas fa-user"></i>
+                            <div className="info">
+                                <div className="head">Nome</div>
+                                <div className="sub-title">Everaldo Martins</div>
                             </div>
-                            <div className="row">
-                                <i className="fas fa-map-marker-alt"></i>
-                                <div className="info">
-                                    <div className="head">Endereço</div>
-                                    <div className="sub-title">Rua Quatro de Outubro, Santa Luzia, Paraíba</div>
-                                </div>
+                        </div>
+                        <div className="row">
+                            <i className="fas fa-map-marker-alt"></i>
+                            <div className="info">
+                                <div className="head">Endereço</div>
+                                <div className="sub-title">Rua Quatro de Outubro, Santa Luzia, Paraíba</div>
                             </div>
-                            <div className="row">
-                                <i className="fas fa-envelope"></i>
-                                <div className="info">
-                                    <div className="head">E-mail</div>
-                                    <div className="sub-title">everaldoinfortecnico@gmail.com</div>
-                                </div>
+                        </div>
+                        <div className="row">
+                            <i className="fas fa-envelope"></i>
+                            <div className="info">
+                                <div className="head">E-mail</div>
+                                <div className="sub-title">everaldoinfortecnico@gmail.com</div>
                             </div>
                         </div>
                     </div>
-                    <div className="column right">
-                        <div className="text">Envie-me uma mensagem</div>
-                        <div ref={statusRef} className="my-form-status"></div>
-                        <form ref={formRef} action="https://formspree.io/f/xdoqvvyr" method="POST">
-                            <div className="fields">
-                                <div className="field name">
-                                    <input type="text" name="name" placeholder="Nome" required />
-                                </div>
-                                <div className="field email">
-                                    <input type="email" name="email" placeholder="E-mail" required />
-                                </div>
+                </div>
+
+                <div className="contact-right">
+                    <h1 className="text">Envie-me uma mensagem</h1>
+                    <div ref={statusRef} className="my-form-status"></div>
+                    <form ref={formRef}> 
+                        <div className="fields">
+                            <div className="field">
+                                <input type="text" name="name" placeholder="Nome" required />
                             </div>
+
+                            <div className="field">
+                                <input type="email" name="email" placeholder="E-mail" required />
+                            </div>
+
                             <div className="field">
                                 <input type="text" name="subject" placeholder="Assunto" required />
-                            </div>
-                            <div className="field textarea">
-                                <textarea name="message" cols={30} rows={10} placeholder="Mensagem" required></textarea>
-                            </div>
-                            <div className="button-area">
-                                <button type="submit" id="my-form-button"> Enviar</button>
-                            </div>
-                        </form>
-                    </div>
+                            </div>                            
+                        </div>
+
+                        <div className="field">
+                            <textarea name="message" cols={30} rows={10} placeholder="Mensagem" required></textarea>
+                        </div>
+
+                        <button type="submit" id="my-form-button"><i className="fa-solid fa-share-from-square"></i> Enviar</button>
+
+                    </form>
                 </div>
             </div>
         </section>

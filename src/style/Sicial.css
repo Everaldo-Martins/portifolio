@@ -6,7 +6,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     padding: 5px;
     position: absolute;
     left: 30px;
@@ -63,23 +63,4 @@
 .social a:hover .tooltip {
     color: var(--color_04);
     visibility: visible;
-}
-
-@media (max-width: 947px) {
-    .social {
-        position: fixed;
-        height: 30px;
-        left: inherit;
-        right: 10px;
-        bottom: 20px;
-    }
-
-    .social a {
-        font-size: 3vw;
-        width: 30px;
-    }
-
-    .social a .tooltip {
-        font-size: 3vw;
-    }
 }

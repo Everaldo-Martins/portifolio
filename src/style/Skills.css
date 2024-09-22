@@ -1,0 +1,165 @@
+.skills .box-content {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.skills .box-content .skills-left,
+.skills .box-content .skills-right {
+    height: max-content;
+    padding: 20px;
+    color: var(--color_04);
+    flex: 2;       
+}
+
+.skills .box-content .skills-left{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.skills .box-content .text {
+    font-size: 1.8em;
+    line-height: 2em;
+    font-weight: 600;
+}
+
+.skills .box-content p {
+    font-size: 1.4em;
+    line-height: 1.6em;
+    text-align: justify;
+}
+
+.skills .box-content a {
+    background-color: transparent;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 12px 24px;
+    font-weight: 400;
+    color: var(--color_05);
+    border: 2px solid var(--color_05);
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.5s linear;
+}
+
+.skills .box-content i {
+    font-size: 2rem;
+    padding: 0 0 0 15px;
+}
+
+.skills .box-content a:hover {
+    background-color: var(--color_05);
+    color: var(--color_01);
+}
+
+.skills .box-content .bars {
+    margin-bottom: 15px;
+}
+
+.skills .box-content .info {
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .box-content span {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.skills .box-content .line {
+    background-color: var(--color_04);
+    height: 5px;
+    width: 100% !important;
+    position: relative;
+}
+
+.skills .box-content .line::before {
+    background-color: var(--color_05);
+    content: "";
+    position: absolute;
+    height: 5px;
+    left: 0;
+    top: 0;
+    width: 0%;
+    transition: width 5s ease;
+}
+
+.box-content .html::before {
+    animation: fillHtml 5s forwards;
+}
+
+.box-content .css::before {
+    animation: fillCss 5s forwards;
+}
+
+.box-content .js::before {
+    animation: fillJs 5s forwards;
+}
+
+.box-content .php::before {
+    animation: fillPhp 5s forwards;
+}
+
+.box-content .react::before {
+    animation: fillReact 5s forwards;
+}
+
+.box-content .flutter::before {
+    animation: fillFlutter 5s forwards;
+}
+
+.box-content .mysql::before {
+    animation: fillMysql 5s forwards;
+}
+
+@keyframes fillHtml {
+    to {
+        width: 90%;
+    }
+}
+
+@keyframes fillCss {
+    to {
+        width: 90%;
+    }
+}
+
+@keyframes fillJs {
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes fillPhp {
+    to {
+        width: 70%;
+    }
+}
+
+@keyframes fillReact {
+    to {
+        width: 75%;
+    }
+}
+
+@keyframes fillFlutter {
+    to {
+        width: 70%;
+    }
+}
+
+@keyframes fillMysql {
+    to {
+        width: 70%;
+    }
+}

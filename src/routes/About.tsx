@@ -1,32 +1,43 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import profile from '../assets/images/profile-1.jpg';
+import '../style/About.css';
+import '../style/AnimatedButton.css';
+
 
 const About: React.FC = () => {
     return (
         <section className="about">
-            <h2 className="title">Sobre mim</h2>
-            <div className="about-content">
-                <div className="">
-                    <img src={profile} alt="Imagem de Perfil" />
+            <div className="box-content">
+                <div className="about-left">
+                    <figure>
+                        <img src={profile} alt="Imagem de Perfil" />
+                    </figure>
                 </div>
-                <div className="column right">
-                    <div className="text">Sou Everaldo.</div>
-                    <p>Sou um entusiasta da tecnologia apaixonado por programação e desenvolvimento de software. Com
-                        habilidades em HTML, CSS, JavaScript, Node.js, Flutter, PHP, C, Java e Python, estou
-                        constantemente explorando novas tecnologias e aprimorando minhas habilidades para enfrentar
-                        desafios cada vez mais complexos. Tenho uma sólida formação acadêmica em Técnico em
-                        Informática pelo Instituto Federal da Paraíba e estudo Ciência da Computação na Universidade
-                        Estadual da Paraíba.</p>
-                    <p>Com experiência em desenvolvimento web e mobile, bem como em manutenção de hardware e redes,
-                        busco oportunidades para aplicar meu conhecimento em projetos inovadores que visam
-                        proporcionar experiências excepcionais aos usuários. Sou comprometido com a excelência, a
-                        criatividade e a busca contínua por soluções tecnológicas de alta qualidade.</p>
-                    <p>Além disso, como representante técnico na Prefeitura Municipal de Santa Luzia, desempenho um
-                        papel multifacetado que envolve desde a configuração e manutenção de sistemas até a
-                        participação ativa na comissão de licitações. Estou disponível para viagens e aberto a novas
-                        oportunidades que me permitam continuar crescendo profissionalmente e contribuindo para o
-                        avanço da tecnologia.</p>
-                    <a target="_blank" href="/downloads/CV-Everaldo.txt"> Download CV</a>
+                <div className="about-right">
+                    <div className="text-1">Olá, Visitante!</div>
+                    <p className='text-2'>Sou Everaldo Martins, um entusiasta da tecnologia, apaixonado por programação e desenvolvimento de software. 
+                        Ao custo de muito esforço, desenvolvi habilidades em algumas tecnologias como HTML, CSS, JavaScript, Node.js, 
+                        Flutter, Java e Python, procuro aprimorar minhas habilidades para enfrentar desafios cada vez mais 
+                        complexos. Tenho formação acadêmica em Técnico em Informática e Ciência da Computação.
+                    </p>
+                    <p className='text-2'>Tenho experiência em desenvolvimento web, desktop e mobile, busco a possibilidade de aprender 
+                        com os desafios, aplicando o conhecimento em projetos inovadores que visem proporcionar experiências excepcionais 
+                        aos usuários. Sou comprometido com a excelência, a criatividade e a busca contínua por soluções tecnológicas de 
+                        alta qualidade.
+                    </p>
+                    <p className='text-2'>A formação com Técnico em Informática possibilita desenvolver um papel multifacetado que envolve 
+                        desde a configuração e manutenção de sistemas e redes. Estou aberto a novas oportunidades que me permitam continuar 
+                        crescendo profissionalmente e contribuir para o avanço da tecnologia.
+                    </p>
+                    <Link to="/downloads/CV-Everaldo.txt" target='_blank' className='animated-button'>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <i className="fa-solid fa-file-arrow-down"></i>
+                        Baixar C.V.
+                    </Link>
                 </div>
             </div>
         </section>

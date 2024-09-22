@@ -4,6 +4,7 @@ import profile2 from '../assets/images/profile-2.jpg';
 import profile3 from '../assets/images/profile-3.jpg';
 import profile4 from '../assets/images/profile-4.jpg';
 import profile5 from '../assets/images/profile-5.jpg';
+import '../style/Teams.css';
 
 const Teams: React.FC = () => {
     const wrapperRef = useRef<HTMLDivElement>(null);
@@ -16,40 +17,45 @@ const Teams: React.FC = () => {
 
         const firstCardWidth = (carousel.querySelector(".card") as HTMLElement).offsetWidth;
         const arrowBtns = wrapper.querySelectorAll("i");
-        const carouselChildrens = Array.from(carousel.children);
-
-        let isDragging = false, isAutoPlay = true, startX: number, startScrollLeft: number, timeoutId: number;
-
+        const carouselChildren = Array.from(carousel.children);
         const cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
 
-        carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
-            carousel.insertAdjacentHTML("afterbegin", (card as HTMLElement).outerHTML);
-        });
+        let isDragging = false;
+        let isAutoPlay = true;
+        let startX = 0;
+        let startScrollLeft = 0;
+        let timeoutId: number;
 
-        carouselChildrens.slice(0, cardPerView).forEach(card => {
-            carousel.insertAdjacentHTML("beforeend", (card as HTMLElement).outerHTML);
-        });
-
-        carousel.classList.add("no-transition");
-        carousel.scrollLeft = carousel.offsetWidth;
-        carousel.classList.remove("no-transition");
-
-        arrowBtns.forEach(btn => {
-            btn.addEventListener("click", () => {
-                carousel.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
+        // Duplicate first and last cards for infinite scroll effect
+        const duplicateCards = () => {
+            carouselChildren.slice(-cardPerView).reverse().forEach(card => {
+                carousel.insertAdjacentHTML("afterbegin", (card as HTMLElement).outerHTML);
             });
-        });
+
+            carouselChildren.slice(0, cardPerView).forEach(card => {
+                carousel.insertAdjacentHTML("beforeend", (card as HTMLElement).outerHTML);
+            });
+
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.offsetWidth;
+            carousel.classList.remove("no-transition");
+        };
+
+        const handleArrowClick = (direction: 'left' | 'right') => {
+            carousel.scrollLeft += direction === 'left' ? -firstCardWidth : firstCardWidth;
+        };
 
         const dragStart = (e: MouseEvent) => {
             isDragging = true;
-            carousel.classList.add("dragging");
             startX = e.pageX;
             startScrollLeft = carousel.scrollLeft;
+            carousel.classList.add("dragging");
         };
 
         const dragging = (e: MouseEvent) => {
             if (!isDragging) return;
-            carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+            const diff = e.pageX - startX;
+            carousel.scrollLeft = startScrollLeft - diff;
         };
 
         const dragStop = () => {
@@ -74,8 +80,16 @@ const Teams: React.FC = () => {
 
         const autoPlay = () => {
             if (window.innerWidth < 800 || !isAutoPlay) return;
-            timeoutId = window.setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+            timeoutId = setTimeout(() => {
+                carousel.scrollLeft += firstCardWidth;
+            }, 2500);
         };
+
+        duplicateCards();
+
+        arrowBtns.forEach(btn => {
+            btn.addEventListener("click", () => handleArrowClick(btn.id === 'left' ? 'left' : 'right'));
+        });
 
         carousel.addEventListener("mousedown", dragStart);
         carousel.addEventListener("mousemove", dragging);
@@ -87,6 +101,9 @@ const Teams: React.FC = () => {
         autoPlay();
 
         return () => {
+            arrowBtns.forEach(btn => {
+                btn.removeEventListener("click", () => handleArrowClick(btn.id === 'left' ? 'left' : 'right'));
+            });
             carousel.removeEventListener("mousedown", dragStart);
             carousel.removeEventListener("mousemove", dragging);
             document.removeEventListener("mouseup", dragStop);
@@ -97,39 +114,21 @@ const Teams: React.FC = () => {
     }, []);
 
     return (
-        <section className="teams" id="teams">
-            <div className="max-width">
+        <section className="teams">
+            <div className='box-content'>
                 <h2 className="title">Minha equipe</h2>
                 <div className="wrapper" ref={wrapperRef}>
-                    <i id="left" className="fa fa-caret-left"></i>
+                    <i id="left" className="fa-solid fa-angle-left"></i>
                     <ul className="carousel" ref={carouselRef}>
-                        <li className="card">
-                            <div className="img"><img src={profile1} alt="img" draggable="false" /></div>
-                            <h2>Everaldo Martins</h2>
-                            <span>Desenvolvedor</span>
-                        </li>
-                        <li className="card">
-                            <div className="img"><img src={profile2} alt="img" draggable="false" /></div>
-                            <h2>Joenas Brauers</h2>
-                            <span>Sales Manager</span>
-                        </li>
-                        <li className="card">
-                            <div className="img"><img src={profile3} alt="img" draggable="false" /></div>
-                            <h2>Lariach French</h2>
-                            <span>Online Teacher</span>
-                        </li>
-                        <li className="card">
-                            <div className="img"><img src={profile4} alt="img" draggable="false" /></div>
-                            <h2>James Khosravi</h2>
-                            <span>Freelancer</span>
-                        </li>
-                        <li className="card">
-                            <div className="img"><img src={profile5} alt="img" draggable="false" /></div>
-                            <h2>Kristina Zasiadko</h2>
-                            <span>Bank Manager</span>
-                        </li>
+                        {[profile1, profile2, profile3, profile4, profile5].map((profile, index) => (
+                            <li className="card" key={index}>
+                                <div className="img"><img src={profile} alt={`profile-${index}`} draggable="false" /></div>
+                                <h2>{`Membro ${index + 1}`}</h2>
+                                <span>{['Desenvolvedor', 'Sales Manager', 'Online Teacher', 'Freelancer', 'Bank Manager'][index]}</span>
+                            </li>
+                        ))}
                     </ul>
-                    <i id="right" className="fa fa-caret-right"></i>
+                    <i id="right" className="fa-solid fa-angle-right"></i>
                 </div>
             </div>
         </section>

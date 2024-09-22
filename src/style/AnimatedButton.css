@@ -1,0 +1,97 @@
+.animated-button {
+    background-color: transparent;
+    display: inline-block;
+    font-size: 1.4rem;
+    padding: 1.4rem 2rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--color_05);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.2s ease-in-out;
+}
+
+.animated-button::before {
+    background-color: var(--color_01);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.animated-button:hover::before {
+    opacity: 0.2;
+}
+
+.animated-button i {
+    font-size: 1.3rem;
+    padding: 0 10px;
+}
+
+.animated-button span {
+    position: absolute;
+    background: linear-gradient(to right, transparent, var(--color_05));
+}
+
+.animated-button span:nth-child(1),
+.animated-button span:nth-child(3) {
+    border-radius: 10px;
+    height: 0.15rem;
+    width: 100%;
+}
+
+.animated-button span:nth-child(2),
+.animated-button span:nth-child(4) {
+    border-radius: 10px;
+    width: 0.15rem;
+    height: 100%;
+}
+
+.animated-button span:nth-child(1) {
+    top: 0;
+    left: 0;
+    animation: animateX 2s linear infinite;
+}
+
+.animated-button span:nth-child(2) {
+    top: 0;
+    right: 0;
+    animation: animateY 2s linear -1s infinite;
+}
+
+.animated-button span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    animation: animateX 2s linear infinite reverse;
+}
+
+.animated-button span:nth-child(4) {
+    top: 0;
+    left: 0;
+    animation: animateY 2s linear -1s infinite reverse;
+}
+
+@keyframes animateX {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animateY {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}

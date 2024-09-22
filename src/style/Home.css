@@ -86,11 +86,11 @@
 }
 
 .home .home-left a {
+    background-color: transparent;
     display: inline-block;
-    background-color: var(--color_05);
-    color: var(--color_02);
+    color: var(--color_05);
     font-size: 1.4rem;
-    padding: 12px 36px;
+    padding: 12px 24px;
     font-weight: 500;
     border-radius: 10px;
     border-width: 2px;
@@ -108,8 +108,8 @@
 }
 
 .home .home-left a:hover {
-    color: var(--color_05);
-    background: none;
+    background-color: var(--color_05);
+    color: var(--color_02);
 }
 
 @keyframes blink {
@@ -118,62 +118,5 @@
     }
     100% {
         opacity: 1;
-    }
-}
-
-@media (max-width: 992px) {
-    .home .box-content {
-        flex-direction: column-reverse;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 10px;
-        overflow: hidden;
-    }
-
-    .home .home-left,
-    .home .home-right {
-        width: 95%;
-        min-height: 45%;
-        max-height: 45%;
-    }
-
-    .home .home-left {
-        align-items: flex-start;
-    }
-
-    .home .home-left .text-1 {
-        font-size: 5vw;
-        line-height: 5vw;
-    }
-
-    .home .home-left .text-2 {
-        font-size: 14vw;
-        line-height: 10vw;
-    }
-
-    .home .home-left .text-3 i {
-        font-size: 5vw;
-        line-height: 3vw;
-    }
-
-    .home .home-left .text-3 span {
-        font-size: 5vw;
-        line-height: 3vw;
-    }
-
-    .home .home-right figure {
-        max-width: 400px;
-        max-height: 400px;
-    }
-}
-
-@media (max-width: 576px) {     
-    .home .home-right figure {
-        max-width: 300px;
-        max-height: 300px;
-    }
-    .home .home-left a {
-        font-size: 1.2rem;
-        padding: 8px 22px;
     }
 }

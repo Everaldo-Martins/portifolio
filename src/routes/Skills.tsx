@@ -1,72 +1,63 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import '../style/Skills.css';
+import { Link } from 'react-router-dom';
+
+const skillsData = [
+    { name: 'HTML', percentage: 90, className: 'html' },
+    { name: 'CSS', percentage: 90, className: 'css' },
+    { name: 'JavaScript', percentage: 80, className: 'js' },
+    { name: 'PHP', percentage: 70, className: 'php' },
+    { name: 'React', percentage: 75, className: 'react' },
+    { name: 'Flutter', percentage: 70, className: 'flutter' },
+    { name: 'MySQL', percentage: 70, className: 'mysql' }
+];
 
 const Skills: React.FC = () => {
+    const [percentages, setPercentages] = useState<number[]>(Array(skillsData.length).fill(0));
+
+    useEffect(() => {
+        skillsData.forEach((skill, index) => {
+            let start = 0;
+            const interval = setInterval(() => {
+                setPercentages(prev => {
+                    const updated = [...prev];
+                    if (updated[index] < skill.percentage) {
+                        updated[index] = start;
+                    } else {
+                        clearInterval(interval);
+                    }
+                    return updated;
+                });
+                start += 1;
+            }, 51);
+        });
+    }, []);
+
     return (
-        <section className="skills" id="skills">
-            <div className="max-width">
-                <h2 className="title">Minhas habilidades</h2>
-                <div className="skills-content">
-                    <div className="column">
-                        <h1 className="text">Minhas habilidades e experiências.</h1>
-                        <p>Tenho uma sólida experiência em desenvolvimento web e mobile, abrangendo diversas tecnologias
-                            e linguagens de programação. Ao longo da minha trajetória, desenvolvi habilidades em várias
-                            áreas. Meu conjunto diversificado de habilidades me permite enfrentar uma ampla gama de
-                            desafios de desenvolvimento, desde a criação de interfaces atraentes até a implementação de
-                            funcionalidades complexas no back-end. Estou sempre buscando aprender e me adaptar às novas
-                            tecnologias para entregar soluções de alta qualidade.</p>
-                        <a href="#contact"> Mais informação</a>
-                    </div>
-                    <div className="column">
-                        <div className="bars">
+        <section className="skills">
+            <div className="box-content">
+                <div className="skills-left">
+                    <h1 className="text">Minhas habilidades e experiências.</h1>
+                    <p>Tenho experiência em desenvolvimento web, desktop e mobile, abrangendo diversas tecnologias e 
+                        linguagens de programação. Ao longo da minha trajetória, com muito esforço, desenvolvi habilidades 
+                        em várias áreas. O conjunto diversificado de habilidades permite enfrentar uma ampla gama de desafios 
+                        de desenvolvimento, desde a criação de interfaces atraentes até a implementação de funcionalidades 
+                        complexas. Sempre buscando adquirir conhecimento e adaptar-se às novas tecnologias para entregar 
+                        soluções de alta qualidade.
+                    </p>
+                    <Link to="/contact"><i className="fa-solid fa-circle-exclamation"></i> Informação</Link>
+                </div>
+                
+                <div className="skills-right">
+                    {skillsData.map((skill, index) => (
+                        <div key={skill.name} className="bars">
                             <div className="info">
-                                <span>HTML</span>
-                                <span>90%</span>
+                                <span>{skill.name}</span>
+                                <span>{percentages[index]}%</span>
                             </div>
-                            <div className="line html"></div>
+                            <div className={`line ${skill.className}`} style={{ width: `${percentages[index]}%` }}></div>
                         </div>
-                        <div className="bars">
-                            <div className="info">
-                                <span>CSS</span>
-                                <span>90%</span>
-                            </div>
-                            <div className="line css"></div>
-                        </div>
-                        <div className="bars">
-                            <div className="info">
-                                <span>JavaScript</span>
-                                <span>80%</span>
-                            </div>
-                            <div className="line js"></div>
-                        </div>
-                        <div className="bars">
-                            <div className="info">
-                                <span>PHP</span>
-                                <span>70%</span>
-                            </div>
-                            <div className="line php"></div>
-                        </div>
-                        <div className="bars">
-                            <div className="info">
-                                <span>React</span>
-                                <span>75%</span>
-                            </div>
-                            <div className="line react"></div>
-                        </div>
-                        <div className="bars">
-                            <div className="info">
-                                <span>Flutter</span>
-                                <span>70%</span>
-                            </div>
-                            <div className="line flutter"></div>
-                        </div>
-                        <div className="bars">
-                            <div className="info">
-                                <span>MySQL</span>
-                                <span>70%</span>
-                            </div>
-                            <div className="line mysql"></div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>

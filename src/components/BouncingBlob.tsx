@@ -20,13 +20,8 @@ class BouncingBlob {
     this.x += this.xVel;
     this.y += this.yVel;
 
-    // Reverte a direção quando bate nas bordas horizontais
     this.xVel *= (this.x < 0 || this.x > window.innerWidth - this.element.offsetWidth) ? -1 : 1;
-
-    // Reverte a direção quando bate nas bordas verticais
     this.yVel *= (this.y < 0 || this.y > window.innerHeight - this.element.offsetHeight) ? -1 : 1;
-
-    // Atualiza a posição
     this.element.style.transform = `translate(${this.x}px, ${this.y}px)`;
   }
 }
@@ -41,7 +36,6 @@ const BouncingBlobs: React.FC = () => {
     const colors = ['blue', 'pink', 'purple'];
     const blobs: BouncingBlob[] = [];
 
-    // Cria blobs com cores diferentes
     colors.forEach(color => {
       const blob = document.createElement('span');
       blob.classList.add('bouncing-blob', `bouncing-blob--${color}`);
@@ -55,7 +49,6 @@ const BouncingBlobs: React.FC = () => {
       blobs.push(new BouncingBlob(blob, x, y, xVel, yVel));
     });
 
-    // Função de animação
     function animate() {
       blobs.forEach(blob => blob.updatePosition());
       requestAnimationFrame(animate);
@@ -63,7 +56,6 @@ const BouncingBlobs: React.FC = () => {
 
     animate();
 
-    // Cleanup quando o componente for desmontado
     return () => {
       blobs.forEach(blob => blob.element.remove());
     };
