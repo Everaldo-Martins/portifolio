@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../assets/logo.svg';
 import { Link } from 'react-router-dom';
+import '../style/Menu.css';
 
 const Menu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);  
@@ -11,7 +12,6 @@ const Menu: React.FC = () => {
 
   return (
     <nav className="navbar">
-      <div className="max-width">
         <div className="logo">
           <a href="./"><img src={logo} alt="EMD" /></a>
         </div>
@@ -24,7 +24,6 @@ const Menu: React.FC = () => {
           <li><Link to="/contact">Contato</Link></li>
         </ul>
         <div className="menu-btn fas fa-bars" onClick={toggleMenu} />
-      </div>
     </nav>
   );
 };

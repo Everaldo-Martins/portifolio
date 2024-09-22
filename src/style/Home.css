@@ -1,28 +1,33 @@
-.home {    
-    width: 90%; 
-    background-color: transparent;
+.home .box-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .home .home-left, .home .home-right {  
-    width: 50%;
-    min-height: calc(100vh - 110px);  
+    width: 50%;     
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;    
     gap: 30px;
 }
 
+.home .home-left {
+    min-height: 80%;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
 .home .home-right { 
-    background-image: url(../assets/images/bgUser.png);
-    background-repeat: no-repeat;
-    background-position: 50px 20px;
-    background-size: 80%;
+    height: 90%;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .home .home-right figure {
@@ -32,7 +37,9 @@
     height: 100%;
     max-height: 450px;
     border-radius: 50%;
-    border: 10px solid var(--color_05);
+    border: 5px solid var(--color_05);
+    box-shadow: 10px 10px 60px -25px var(--color_01_opacity);
+    z-index: 9;
 }
 
 .home .home-right img{
@@ -41,27 +48,41 @@
 }
 
 .home .home-left .text-1 {
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 1.8rem;
+    line-height: 0.5rem;
+    padding: 0 10px;
     color: var(--color_04); 
 }
 
 .home .home-left .text-2 {
-    font-size: 6rem;
-    line-height: 4rem;
+    font-family: "Ephesis", cursive;
+    font-size: 8rem;
+    line-height: 6rem;
     color: var(--color_04); 
-    font-weight: 600;
+    font-weight: 400;
 }
 
-.home .home-left .text-3 {
+.home .home-left .text-3 b {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color_04);
+    animation: blink 1s infinite;  
+}
+
+.home .home-left .text-3 i {
     color: var(--color_04); 
-    font-size: 3.2rem;
+    font-size: 2.5rem;
+    padding: 0 10px;
 }
 
 .home .home-left .text-3 span {
-    font-size: 3.2rem;
-    color: var(--color_05);
-    font-weight: 500;    
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--color_04);        
 }
 
 .home .home-left a {
@@ -81,7 +102,7 @@
 }
 
 .home .home-left a::before {
-    font-size: 1.3rem;
+    font-size: 2rem;
     font-family: 'FontAwesome';
     content: '\f573';
 }
@@ -89,4 +110,70 @@
 .home .home-left a:hover {
     color: var(--color_05);
     background: none;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 992px) {
+    .home .box-content {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+        overflow: hidden;
+    }
+
+    .home .home-left,
+    .home .home-right {
+        width: 95%;
+        min-height: 45%;
+        max-height: 45%;
+    }
+
+    .home .home-left {
+        align-items: flex-start;
+    }
+
+    .home .home-left .text-1 {
+        font-size: 5vw;
+        line-height: 5vw;
+    }
+
+    .home .home-left .text-2 {
+        font-size: 14vw;
+        line-height: 10vw;
+    }
+
+    .home .home-left .text-3 i {
+        font-size: 5vw;
+        line-height: 3vw;
+    }
+
+    .home .home-left .text-3 span {
+        font-size: 5vw;
+        line-height: 3vw;
+    }
+
+    .home .home-right figure {
+        max-width: 400px;
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 576px) {     
+    .home .home-right figure {
+        max-width: 300px;
+        max-height: 300px;
+    }
+    .home .home-left a {
+        font-size: 1.2rem;
+        padding: 8px 22px;
+    }
 }

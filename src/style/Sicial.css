@@ -1,72 +1,85 @@
 
 .social {
-    width: 50px;
-    height: auto;
+    width: fit-content;
+    height: 50px;
     padding: 0;
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 38%;
-    z-index: 99;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    position: absolute;
+    left: 30px;
+    bottom: 60px;
+    z-index: 11;
 }
 
-.social .fa,
-.social .fab {
-    background-color: var(--color_03);
+.social a {
+    background-color: var(--color_02);
     width: 50px;
+    height: auto;
     font-size: 2.1rem;
-    padding: 0.5rem;
+    padding: 0.6rem;
     color: var(--color_05);
     text-align: center;
     text-decoration: none;
-    margin: 0 0 1rem 1rem;
+    margin: 0;
     outline: none;
-    border: none;
-    border-radius: 0.2rem;
-    box-shadow: 0 2px 4px var(--color_03_opacity);
+    border: 1px solid var(--color_03);
+    border-radius: 10px;
     position: relative;
     float: left;
     transition: all 0.2s ease 0.1s;
 }
 
-.social .fa:last-child,
-.social .fab:last-child {
-    margin: 0 0 0 1rem;
-}
-
-.social .fa .tooltip,
-.social .fab .tooltip {
+.social a .tooltip {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 1.2rem;
     visibility: hidden;
     background-color: var(--color_03);
-    color: var(--color_05);
+    color: var(--color_04);
     text-align: center;
-    border-radius: 6px;
+    border-radius: 10px;
     padding: 0.7rem 0.8rem 0.6rem 0.8rem;
     position: absolute;
     width: max-content;
-    top: 5px;
-    left: 120%;
+    bottom: 120%;
+    left: 0;
     transition: all 0.2s ease 0.1s;
 }
 
-.social .fa .tooltip::after,
-.social .fab .tooltip::after {
+.social a .tooltip::after {
     content: " ";
     position: absolute;
-    top: 50%;
-    right: 100%;
-    margin-top: -4px;
+    top: 100%;
+    left: 40%;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent var(--color_03) transparent transparent;
+    border-color: var(--color_03) transparent transparent transparent;
 }
 
-.social .fa:hover .tooltip,
-.social .fab:hover .tooltip {
-    color: var(--color_05);
+.social a:hover .tooltip {
+    color: var(--color_04);
     visibility: visible;
+}
+
+@media (max-width: 947px) {
+    .social {
+        position: fixed;
+        height: 30px;
+        left: inherit;
+        right: 10px;
+        bottom: 20px;
+    }
+
+    .social a {
+        font-size: 3vw;
+        width: 30px;
+    }
+
+    .social a .tooltip {
+        font-size: 3vw;
+    }
 }

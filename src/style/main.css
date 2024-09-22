@@ -1,5 +1,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
 
 *,
 *::before,
@@ -13,6 +15,9 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 ul[role='list'],
@@ -64,13 +69,15 @@ select {
     }
 }
 
-body,
-html {
-    height: auto;
-    min-height: 100dvh;
+html, body, #root {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
+    outline: none;
 }
 
 :root {
@@ -93,283 +100,23 @@ html {
     --color_05_opacity: rgba(0, 213, 255, 0.8);
 }
 
-main {    
-    width: 100%;
-    height: calc(100dvh - 106px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header, main, footer {
+header, footer {
     background-color: var(--color_01_opacity);
-}
-
-header, footer, .home, .about, .experience, .skills, .teams, .contact {    
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    min-height: 100%;
-}
-
-.row {
     width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+    padding: 10px 20px;
 }
 
-.column {
+main {
+    background-color: var(--color_01_opacity);
     width: 100%;
-    height: auto;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
 }
 
-@media (max-width: 1104px) {
-    .about .about-content  img {
-        height: 350px;
-        width: 350px;
-    }
-}
-
-@media (max-width: 991px) {
-    .max-width {
-        padding: 0 50px;
-    }
-}
-
-@media (max-width: 947px) {
-    .navbar .menu li a {
-        display: flex;
-        padding: 10px 2px;
-        color: var(--color_04);
-        transition: color 0.3s ease;
-    }
-
-    .navbar .menu li a::after {
-        height: 1px;
-        padding: 5px 0;
-    }
-
-    .home .home-content .text-2 {
-        font-size: 50px;
-    }
-
-    .home .home-content .text-3 {
-        font-size: 25px;
-    }
-
-    .home .home-content a {
-        font-size: 23px;
-        padding: 10px 30px;
-    }
-
-    .social {
-        top: 25%;
-    }
-
-    .max-width {
-        max-width: 930px;
-    }
-
-    .about .about-content .column {
-        width: 100%;
-    }
-
-    .about .about-content .left {
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 60px;
-    }
-
-    .about .about-content .right {
-        flex: 100%;
-    }
-
-    .services .serv-content .card {
-        width: calc(50% - 10px);
-        margin-bottom: 20px;
-    }
-
-    .skills .skills-content .column,
-    .contact .contact-content .column {
-        width: calc(100% - 40px);
-        margin-bottom: 20px;
-    }
-
-    .contact .contact-content .info .sub-title {
-        font-size: 14px;
-        color: var(--color_02);
-    }
-
-    .teams .wrapper .carousel {
-        grid-auto-columns: calc((100% / 2) - 9px);
-    }
-}
-
-@media (max-width: 690px) {
-    .navbar .menu {
-        display: none;
-        height: 100vh;
-        width: 100%;
-        left: -100%;
-        top: 0;        
-        transition: all .4s ease;
-    }   
-
-    .navbar .active {        
-        background-color: var(--color_02);
-        backdrop-filter: blur(1rem);
-        position: fixed;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .navbar .menu li {
-        display: block;
-    }
-
-    .navbar .menu li a {
-        display: flex;
-        font-size: 25px;
-    }
-
-    .menu-btn {
-        color: var(--color_04);
-        padding: auto 10px auto auto;
-        font-size: 28px;
-        cursor: pointer;
-        display: none;
-        transition: all 0.3s ease;
-        display: flex;
-        z-index: 999;
-    }
-
-    .active + .menu-btn:before {
-        font-size: 30px;
-        color: var(--color_05);
-        content: "\f00d";
-    }    
-
-    .max-width {
-        padding: 0 23px;
-    }
-
-    .home .home-content .text-2 {
-        font-size: 60px;
-    }
-
-    .home .home-content .text-3 {
-        font-size: 32px;
-    }
-
-    .home .home-content a {
-        font-size: 20px;
-    }
-
-    .social {
-        top: 22%;
-    }
-
-    .services .serv-content .card {
-        width: 100%;
-    }
-
-    .teams .wrapper .carousel {
-        grid-auto-columns: 100%;
-    }
-}
-
-@media (max-width: 500px) {
-    .navbar .logo img {
-        height: 40px;
-        position: absolute;
-        left: 15px;
-        top: 15px;
-        z-index: 999;
-    }
-
-    .home {
-        background: var(--color_02) url('../assets/images/banner-mobile.jpg');
-        background-attachment: scroll;
-        background-repeat: no-repeat;        
-        background-position: right top;
-        background-size: cover;
-    }
-
-    .home .home-content .text-1 {
-        font-size: 20px;
-        margin: 0 0 8px 0;
-    }
-
-    .home .home-content .text-2 {
-        font-size: 42px;
-    }
-
-    .home .home-content .text-3 {
-        font-size: 22px;
-    }
-
-    .social {
-        position: absolute;
-        top: 22%;
-    }
-
-    .social .fa:hover .tooltip,
-    .social .fab:hover .tooltip {
-        visibility: hidden;
-    }
-
-    .skills {
-        width: 100%;
-    }
-
-    .skills .max-width {
-        padding: 50px 0 0 0;
-    }
-
-    .experience .exp-content .card {
-        width: 100%;
-    }
-
-    .experience .exp-content .card:last-child {
-        margin: 0;
-    }
-
-    .skills .skills-content {
-        flex-direction: column;
-    }
-
-    .contact .right form .fields {
-        flex-direction: column;
-    }
-
-    .contact .right form .name,
-    .contact .right form .email {
-        margin: 0;
-    }
-
-    .right form .error-box {
-        width: 150px;
-    }
-
-    .scroll-up {
-        right: 15px;
-        bottom: 15px;
-        height: 38px;
-        width: 35px;
-        font-size: 23px;
-        line-height: 38px;
-    }
+.home, .about, .experience, .skills, .teams, .contact {    
+    width: 95%;
+    height: 100%;
 }

@@ -52,7 +52,7 @@ section .title::after {
 
 
 /* about section styling */
-.about .about-content .left {
+.about .about-content {
     width: 30%;
 }
 
@@ -747,15 +747,7 @@ footer .copy {
         top: 15px;
         z-index: 999;
     }
-
-    .home {
-        background: var(--color_02) url('../assets/images/banner-mobile.jpg');
-        background-attachment: scroll;
-        background-repeat: no-repeat;        
-        background-position: right top;
-        background-size: cover;
-    }
-
+    
     .home .home-content .text-1 {
         font-size: 20px;
         margin: 0 0 8px 0;

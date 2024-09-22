@@ -1,12 +1,15 @@
 import React from 'react';
 import Menu from './Menu.tsx';
-import '../style/Header.css';
+import BouncingBlobs from './BouncingBlob.tsx';
 
 const Header: React.FC = () => {
   return (
-    <header>        
-        <Menu />
-    </header>
+    <>
+      <BouncingBlobs />     
+      <header>             
+          <Menu />
+      </header>
+    </>    
   );
 };
 

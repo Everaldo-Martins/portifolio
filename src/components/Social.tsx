@@ -1,22 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import '../style/Sicial.css'
+
 
 const Social: React.FC = () => {
     return (
-        <section className="social">
-            <a href="mailto:everaldoinfortecnico@gmail.com" target="_blank" className="fa fa-envelope">
+        <div className="social">
+            <Link to="mailto:everaldoinfortecnico@gmail.com" target="_blank" className="fa-solid fa-envelope">
                 <i className="tooltip">Contato</i>
-            </a>
-            <a href="https://www.linkedin.com/in/everaldo-martins-de-oliveira-214400b3/" target="_blank" className="fab fa-linkedin">
+            </Link>
+            <Link to="https://www.linkedin.com/in/everaldo-martins-de-oliveira-214400b3/" target="_blank" className="fa-brands fa-linkedin">
                 <i className="tooltip">Linkdin</i>
-            </a>
-            <a href="https://www.instagram.com/everaldo_martins1/" target="_blank" className="fab fa-instagram-square">
+            </Link>
+            <Link to="https://www.instagram.com/everaldo_martins1/" target="_blank" className="fa-brands fa-instagram-square">
                 <i className="tooltip">Instagram</i>
-            </a>
-            <a href="https://github.com/Everaldo-Martins" target="_blank" className="fab fa-github">
+            </Link>
+            <Link to="https://github.com/Everaldo-Martins" target="_blank" className="fa-brands fa-github">
                 <i className="tooltip">Github</i>
-            </a>
-        </section>
+            </Link>
+        </div>
     );
 };
 

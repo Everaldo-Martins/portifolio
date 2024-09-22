@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import '../style/Footer.css'
+import Social from './Social';
 
 const Footer: React.FC = () => {    
     useEffect(() => {
@@ -9,9 +10,7 @@ const Footer: React.FC = () => {
 
     return (
         <footer>
-            <div className="scroll-up">
-                <i className="fas fa-angle-up"></i>
-            </div>
+            <Social />
             <span className="copy"></span>
         </footer>
     );

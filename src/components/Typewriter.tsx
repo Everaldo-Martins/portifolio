@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 const texts = ["Estudante", "Web Designer", "Desenvolvedor", "Técnico em Informática"];
-const typingSpeed = 200;
-const erasingSpeed = 100;
-const delayAfterTyping = 1000;
+const typingSpeed = 300;
+const erasingSpeed = 200;
+const delayAfterTyping = 1500;
 
 const Typewriter: React.FC = () => {
   const [index, setIndex] = useState(0);
