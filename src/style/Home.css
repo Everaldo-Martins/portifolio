@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .home .home-left, .home .home-right {  
@@ -13,14 +13,14 @@
     font-weight: 400;
     font-style: normal;
     display: flex;
-    flex-direction: column;    
-    gap: 30px;
+    flex-direction: column; 
 }
 
 .home .home-left {
-    min-height: 90%;
+    min-height: 100%;
     justify-content: flex-end;
     align-items: flex-start;
+    gap: 3.5rem;
 }
 
 .home .home-right { 
@@ -47,9 +47,19 @@
     border-radius: 50%;
 }
 
+.home .home-left .home-text {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.6rem;
+}
+
 .home .home-left .text-1 {
     font-size: 2vw;
-    line-height: 1vw;
+    line-height: 2vw;
     padding: 0 10px;
     color: var(--color_04); 
 }
@@ -57,7 +67,7 @@
 .home .home-left .text-2 {
     font-family: "Ephesis", cursive;
     font-size: 7.8vw;
-    line-height: 6vw;
+    line-height: 7.8vw;
     color: var(--color_04); 
     font-weight: 400;
 }
@@ -196,7 +206,7 @@
         height: 50%;
         max-height: 50%;
         min-height: 25%;  
-        gap: 20px;
+        gap: 0px;
     }
 
     .home .home-right figure {

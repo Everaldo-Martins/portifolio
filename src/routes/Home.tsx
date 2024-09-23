@@ -18,10 +18,13 @@ const Home: React.FC = () => {
         <section className="home">
             <div className="box-content">
                 <div className="home-left">
-                    <div className="text-1">Quem sou eu?</div>
-                    <div className="text-2">Everaldo Martins</div>
-                    <div className="text-3"><i className="fa-solid fa-laptop-code"></i><Typewriter /><b>_</b></div>
-                    <Link to="/portifolio/contact"><i className="fa-solid fa-file-signature"></i> Contrate-me</Link>
+                    <div className='home-text'>
+                        <div className="text-1">Quem sou eu?</div>
+                        <div className="text-2">Everaldo Martins</div>
+                        <div className="text-3"><i className="fa-solid fa-laptop-code"></i><Typewriter /><b>_</b></div>
+                        <Link to="/portifolio/contact"><i className="fa-solid fa-file-signature"></i> Contrate-me</Link>
+                    </div>
+
                     <div className="social">
                         <Link to="mailto:everaldoinfortecnico@gmail.com" target="_blank" className="fa-solid fa-envelope">
                             <i className="tooltip">Contato</i>
