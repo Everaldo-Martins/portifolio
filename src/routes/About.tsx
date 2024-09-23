@@ -26,10 +26,11 @@ const About: React.FC = () => {
                         aos usuários. Sou comprometido com a excelência, a criatividade e a busca contínua por soluções tecnológicas de 
                         alta qualidade.
                     </p>
-                    <p className='text-2'>A formação com Técnico em Informática possibilita desenvolver um papel multifacetado que envolve 
-                        desde a configuração e manutenção de sistemas e redes. Estou aberto a novas oportunidades que me permitam continuar 
-                        crescendo profissionalmente e contribuir para o avanço da tecnologia.
+                    <p className='text-2'>A formação como Técnico em Informática possibilita desenvolver um papel multifacetado que envolve desde a configuração, 
+                        manutenção de sistemas, criação e configuração de redes, dentre outros. Estou aberto a novas oportunidades que me permitam continuar crescendo 
+                        profissionalmente e contribuir para o avanço da tecnologia.
                     </p>
+                    <p className='clearBoth'></p>
                     <Link to="/portifolio/downloads/CV-Everaldo.txt" target='_blank' className='animated-button'>
                         <span></span>
                         <span></span>
