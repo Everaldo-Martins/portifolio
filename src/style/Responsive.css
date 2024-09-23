@@ -1,0 +1,226 @@
+@media (max-width: 947px) {
+    .navbar .menu li a {
+        display: flex;
+        padding: 10px 2px;
+        color: var(--color_04);
+        transition: color 0.3s ease;
+    }
+
+    .navbar .menu li a::after {
+        height: 1px;
+        padding: 5px 0;
+    }
+
+    .home .home-left .text-2 {
+        font-size: 50px;
+    }
+
+    .home .home-left .text-3 {
+        font-size: 25px;
+    }
+
+    .home .home-left a {
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+
+    .social {
+        top: 25%;
+    }
+
+    .max-width {
+        max-width: 930px;
+    }
+
+    .about .about-content .column {
+        width: 100%;
+    }
+
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .about-content .right {
+        flex: 100%;
+    }
+
+    .services .serv-content .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
+    .skills .skills-content .column,
+    .contact .contact-content .column {
+        width: calc(100% - 40px);
+        margin-bottom: 20px;
+    }
+
+    .contact .contact-content .info .sub-title {
+        font-size: 14px;
+        color: var(--color_02);
+    }
+
+    .teams .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media (max-width: 690px) {
+    .navbar .menu {
+        display: none;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;        
+        transition: all .4s ease;
+    }   
+
+    .navbar .active {        
+        background-color: var(--color_02);
+        backdrop-filter: blur(1rem);
+        position: fixed;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: flex;
+        font-size: 25px;
+    }
+
+    .menu-btn {
+        color: var(--color_04);
+        padding: auto 10px auto auto;
+        font-size: 28px;
+        cursor: pointer;
+        display: block; /* Mudei para block */
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+
+    .active + .menu-btn:before {
+        font-size: 30px;
+        color: var(--color_05);
+        content: "\f00d";
+    }    
+
+    .max-width {
+        padding: 0 23px;
+    }
+
+    .home .home-left .text-2 {
+        font-size: 60px;
+    }
+
+    .home .home-left .text-3 {
+        font-size: 32px;
+    }
+
+    .home .home-left a {
+        font-size: 20px;
+    }
+
+    .social {
+        top: 22%;
+    }
+
+    .services .serv-content .card {
+        width: 100%;
+    }
+
+    .teams .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar .logo img {
+        height: 40px;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        z-index: 999;
+    }
+
+    .home {
+        background: var(--color_02) url('../assets/images/banner-mobile.jpg');
+        background-attachment: scroll;
+        background-repeat: no-repeat;        
+        background-position: right top;
+        background-size: cover;
+    }
+
+    .home .home-left .text-1 {
+        font-size: 20px;
+        margin: 0 0 8px 0;
+    }
+
+    .home .home-left .text-2 {
+        font-size: 42px;
+    }
+
+    .home .home-left .text-3 {
+        font-size: 22px;
+    }
+
+    .social {
+        position: absolute;
+        top: 22%;
+    }
+
+    .social .fa:hover .tooltip,
+    .social .fab:hover .tooltip {
+        visibility: hidden;
+    }
+
+    .skills {
+        width: 100%;
+    }
+
+    .skills .max-width {
+        padding: 50px 0 0 0;
+    }
+
+    .experience .exp-content .card {
+        width: 100%;
+    }
+
+    .experience .exp-content .card:last-child {
+        margin: 0;
+    }
+
+    .skills .skills-content {
+        flex-direction: column;
+    }
+
+    .contact .right form .fields {
+        flex-direction: column;
+    }
+
+    .contact .right form .name,
+    .contact .right form .email {
+        margin: 0;
+    }
+
+    .right form .error-box {
+        width: 150px;
+    }
+
+    .scroll-up {
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}

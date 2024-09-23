@@ -18,7 +18,7 @@
 }
 
 .home .home-left {
-    min-height: 80%;
+    min-height: 75%;
     justify-content: flex-end;
     align-items: flex-start;
 }
@@ -48,16 +48,16 @@
 }
 
 .home .home-left .text-1 {
-    font-size: 1.8rem;
-    line-height: 0.5rem;
+    font-size: 2vw;
+    line-height: 1vw;
     padding: 0 10px;
     color: var(--color_04); 
 }
 
 .home .home-left .text-2 {
     font-family: "Ephesis", cursive;
-    font-size: 8rem;
-    line-height: 6rem;
+    font-size: 7.8vw;
+    line-height: 6vw;
     color: var(--color_04); 
     font-weight: 400;
 }
@@ -65,7 +65,7 @@
 .home .home-left .text-3 b {
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     font-weight: 700;
     color: var(--color_04);
     animation: blink 1s infinite;  
@@ -101,10 +101,8 @@
     transition: background-color 0.5s linear;
 }
 
-.home .home-left a::before {
+.home .home-left a i {
     font-size: 2rem;
-    font-family: 'FontAwesome';
-    content: '\f573';
 }
 
 .home .home-left a:hover {

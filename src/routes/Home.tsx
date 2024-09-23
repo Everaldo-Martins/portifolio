@@ -21,7 +21,7 @@ const Home: React.FC = () => {
                     <div className="text-1">Quem sou eu?</div>
                     <div className="text-2">Everaldo Martins</div>
                     <div className="text-3"><i className="fa-solid fa-laptop-code"></i><Typewriter /><b>_</b></div>
-                    <Link to="/contact"> Contrate-me</Link>
+                    <Link to="/contact"><i className="fa-solid fa-file-signature"></i> Contrate-me</Link>
                 </div>
                 <div className="home-right">
                     <figure>
