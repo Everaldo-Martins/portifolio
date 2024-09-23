@@ -6,6 +6,13 @@ import '../style/AnimatedButton.css';
 
 
 const About: React.FC = () => {
+    const lineSpan = () => {
+        const el = [];
+        for (let i = 0; i < 4; i++) {
+            el.push(<span></span>);          
+        }
+        return el;
+    }
     return (
         <section className="about">
             <div className="box-content">
@@ -32,10 +39,7 @@ const About: React.FC = () => {
                     </p>
                     <p className='clearBoth'></p>
                     <Link to="/portifolio/downloads/CV-Everaldo.txt" target='_blank' className='animated-button'>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        {lineSpan()}
                         <i className="fa-solid fa-file-arrow-down"></i>
                         Baixar C.V.
                     </Link>
