@@ -45,7 +45,7 @@ const Skills: React.FC = () => {
                         complexas. Sempre buscando adquirir conhecimento e adaptar-se às novas tecnologias para entregar 
                         soluções de alta qualidade.
                     </p>
-                    <Link to="/contact"><i className="fa-solid fa-circle-exclamation"></i> Informação</Link>
+                    <Link to="/portifolio/contact"><i className="fa-solid fa-circle-exclamation"></i> Informação</Link>
                 </div>
                 
                 <div className="skills-right">

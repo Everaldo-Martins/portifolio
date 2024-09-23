@@ -30,7 +30,7 @@ const About: React.FC = () => {
                         desde a configuração e manutenção de sistemas e redes. Estou aberto a novas oportunidades que me permitam continuar 
                         crescendo profissionalmente e contribuir para o avanço da tecnologia.
                     </p>
-                    <Link to="/downloads/CV-Everaldo.txt" target='_blank' className='animated-button'>
+                    <Link to="/portifolio/downloads/CV-Everaldo.txt" target='_blank' className='animated-button'>
                         <span></span>
                         <span></span>
                         <span></span>

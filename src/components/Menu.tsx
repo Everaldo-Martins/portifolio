@@ -19,15 +19,15 @@ const Menu: React.FC = () => {
   return (
     <nav className="navbar">
         <div className="logo">
-          <a href="./"><img src={logo} alt="EMD" /></a>
+          <a href="/portifolio"><img src={logo} alt="EMD" /></a>
         </div>
         <ul className={`menu ${isOpen ? 'active' : ''}`}>
-          <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
-          <li><Link to="/about" onClick={handleLinkClick}>Sobre</Link></li>
-          <li><Link to="/experience" onClick={handleLinkClick}>Experiência</Link></li>
-          <li><Link to="/skills" onClick={handleLinkClick}>Habilidades</Link></li>
-          <li><Link to="/teams" onClick={handleLinkClick}>Equipe</Link></li>
-          <li><Link to="/contact" onClick={handleLinkClick}>Contato</Link></li>
+          <li><Link to="/portifolio" onClick={handleLinkClick}>Home</Link></li>
+          <li><Link to="/portifolio/about" onClick={handleLinkClick}>Sobre</Link></li>
+          <li><Link to="/portifolio/experience" onClick={handleLinkClick}>Experiência</Link></li>
+          <li><Link to="/portifolio/skills" onClick={handleLinkClick}>Habilidades</Link></li>
+          <li><Link to="/portifolio/teams" onClick={handleLinkClick}>Equipe</Link></li>
+          <li><Link to="/portifolio/contact" onClick={handleLinkClick}>Contato</Link></li>
         </ul>
         <div className="menu-btn fa-solid fa-bars" onClick={toggleMenu} />
     </nav>

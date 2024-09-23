@@ -14,32 +14,32 @@ import Contact from './routes/Contact.tsx';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/portifolio",
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        path: "/portifolio",
         element: <Home />
       },
       {
-        path: "/about",
+        path: "/portifolio/about",
         element: <About />
       },
       {
-        path: "/experience",
+        path: "/portifolio/experience",
         element: <Experience />
       },
       {
-        path: "/skills",
+        path: "/portifolio/skills",
         element: <Skills />
       },
       {
-        path: "/teams",
+        path: "/portifolio/teams",
         element: <Teams />
       },
       {
-        path: "/contact",
+        path: "/portifolio/contact",
         element: <Contact />
       },
     ],

@@ -21,7 +21,7 @@ const Home: React.FC = () => {
                     <div className="text-1">Quem sou eu?</div>
                     <div className="text-2">Everaldo Martins</div>
                     <div className="text-3"><i className="fa-solid fa-laptop-code"></i><Typewriter /><b>_</b></div>
-                    <Link to="/contact"><i className="fa-solid fa-file-signature"></i> Contrate-me</Link>
+                    <Link to="/portifolio/contact"><i className="fa-solid fa-file-signature"></i> Contrate-me</Link>
                     <div className="social">
                         <Link to="mailto:everaldoinfortecnico@gmail.com" target="_blank" className="fa-solid fa-envelope">
                             <i className="tooltip">Contato</i>
