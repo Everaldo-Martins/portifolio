@@ -10,20 +10,26 @@ const Menu: React.FC = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleLinkClick = () => {
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 1000);
+  };
+
   return (
     <nav className="navbar">
         <div className="logo">
           <a href="./"><img src={logo} alt="EMD" /></a>
         </div>
-        <ul className={`menu ${isOpen ? 'active' : ''}`}> {}
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">Sobre</Link></li>
-          <li><Link to="/experience">Experiência</Link></li>
-          <li><Link to="/skills">Habilidades</Link></li>
-          <li><Link to="/teams">Equipe</Link></li>
-          <li><Link to="/contact">Contato</Link></li>
+        <ul className={`menu ${isOpen ? 'active' : ''}`}>
+          <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
+          <li><Link to="/about" onClick={handleLinkClick}>Sobre</Link></li>
+          <li><Link to="/experience" onClick={handleLinkClick}>Experiência</Link></li>
+          <li><Link to="/skills" onClick={handleLinkClick}>Habilidades</Link></li>
+          <li><Link to="/teams" onClick={handleLinkClick}>Equipe</Link></li>
+          <li><Link to="/contact" onClick={handleLinkClick}>Contato</Link></li>
         </ul>
-        <div className="menu-btn fas fa-bars" onClick={toggleMenu} />
+        <div className="menu-btn fa-solid fa-bars" onClick={toggleMenu} />
     </nav>
   );
 };

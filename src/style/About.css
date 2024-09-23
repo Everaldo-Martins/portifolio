@@ -64,3 +64,16 @@
     text-indent: 30px;
     color: var(--color_04); 
 }
+
+@media (max-width: 947px) {    
+    .about .box-content {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .about .box-content .about-left,
+    .about .box-content .about-right {
+        width: 100%;
+    }
+}   
+    

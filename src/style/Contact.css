@@ -8,8 +8,8 @@
     gap: 30px;
 }
 
-.contact-left,
-.contact-right {
+.contact .box-content .contact-left,
+.contact .box-content .contact-right {
     width: 50%;
     height: 90%;
     color: var(--color_04);
@@ -21,25 +21,25 @@
     gap: 20px;
 }
 
-.contact .text {
+.contact .box-content .text {
     font-size: 2.6rem;
     font-weight: 600;
 }
 
-.contact-left p {
+.contact .box-content .contact-left p {
     font-size: 1.3rem;
     line-height: 1.6rem;
     text-align: justify;
 }
 
-.contact-left h3 {
+.contact .box-content .contact-left h3 {
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 2rem;
     text-align: justify;
 }
 
-.contact-left .icons {
+.contact .box-content .contact-left .icons {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,34 +48,34 @@
     gap: 20px;
 }
 
-.contact-left .row {
+.contact .box-content .contact-left .row {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.contact-left .row i {
+.contact .box-content .contact-left .row i {
     font-size: 4rem;
     color: var(--color_05);
 }
 
-.contact-left .info {
+.contact .box-content .contact-left .info {
     justify-content: space-between;
     align-items: center;
     gap: 15px;
 }
 
-.contact-left .info .head {
+.contact .box-content .contact-left .info .head {
     font-size: 1.4rem;
     font-weight: 500;
 }
 
-.contact-left .info .sub-title {
+.contact .box-content .contact-left .info .sub-title {
     font-size: 1.2rem;
     color: var(--color_04);
 }
 
-.contact-right form {
+.contact .box-content .contact-right form {
     width: 100%;
     height: auto;
     display: flex;
@@ -85,25 +85,25 @@
     gap: 15px;
 }
 
-.contact-right form .fields {
+.contact .box-content .contact-right form .fields {
     width: 100%;
     display: flex;
     gap: 15px;
 }
 
-.contact-right form .field,
-.contact-right form textarea {
+.contact .box-content .contact-right form .field,
+.contact .box-content .contact-right form textarea {
     width: 100%;
 }
 
-.contact-right form .textarea {
+.contact .box-content .contact-right form .textarea {
     height: 80px;
 }
 
-.contact-right form input,
-.contact-right form textarea,
-.contact-right form .field input:focus,
-.contact-right form textarea:focus {
+.contact .box-content .contact-right form input,
+.contact .box-content .contact-right form textarea,
+.contact .box-content .contact-right form .field input:focus,
+.contact .box-content .contact-right form textarea:focus {
     background-color: var(--color_01_opacity);
     width: 100%;
     padding: 15px;
@@ -115,17 +115,17 @@
     outline: none;
 }
 
-.contact-right form input::placeholder,
-.contact-right form textarea::placeholder {
+.contact .box-content .contact-right form input::placeholder,
+.contact .box-content .contact-right form textarea::placeholder {
     font-weight: 500;
     color: var(--color_05);
 }
 
-.contact-right form textarea {
+.contact .box-content .contact-right form textarea {
     resize: none;
 }
 
-.contact-right form button {
+.contact .box-content .contact-right form button {
     background-color: var(--color_01_opacity);
     color: var(--color_05);
     font-size: 1.4rem;
@@ -136,16 +136,16 @@
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-.contact-right button i {
+.contact .box-content .contact-right button i {
     font-size: 2rem;
 }
 
-.contact-right form button:hover {
+.contact .box-content .contact-right form button:hover {
     background: var(--color_05);
     color: var(--color_01);
 }
 
-.my-form-status {    
+.contact .box-content .my-form-status {    
     position: absolute;
     top: 30px;
     right: 5px;
@@ -156,10 +156,37 @@
     text-align: justify;
 }
 
-.my-form-status .erro { 
+.contact .box-content .my-form-status .erro { 
     color: var(--erro);
 }
 
-.my-form-status .sucess { 
+.contact .box-content .my-form-status .sucess { 
     color: var(--sucess);
+}
+
+@media (max-width: 947px) {
+    .contact .box-content{
+        flex-direction: column;
+    }
+    .contact .box-content .contact-left,
+    .contact .box-content .contact-right {
+        width: 100%;
+    }
+
+    .contact .box-content .text {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .contact .box-content .contact-left h3 {
+        font-size: 1.4rem;
+    }
+
+    .contact .box-content .contact-right form .fields {
+        flex-direction: column;
+    }
+
+    .contact .box-content .contact-right form button {
+        width: 100%;
+    }
 }

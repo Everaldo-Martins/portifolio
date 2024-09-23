@@ -94,3 +94,25 @@
     text-wrap: wrap;
     font-weight: 400;
 }
+
+@media (max-width: 947px) {    
+    .experience .box-content {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .experience .box-container .experience-top,
+    .experience .box-container .experience-bottom {
+        flex-direction: column;
+        height: 50%;
+        gap: 15px;
+    }
+
+    .experience .experience-top .text{
+        width: 100%;
+    }
+
+    .experience .experience-bottom .card {
+        width: 100%;
+    }
+} 

@@ -65,3 +65,63 @@
     color: var(--color_04);
     cursor: pointer;
 }
+
+@media (max-width: 690px) {
+    .navbar {
+        width: 100%;
+        padding: 10px;
+    }
+    .navbar .menu {
+        display: none;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;        
+        transition: all .4s ease;
+    }   
+
+    .navbar .active {        
+        background-color: var(--color_01_opacity);
+        backdrop-filter: blur(0.5rem);
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: flex;
+        font-size: 25px;
+    }
+
+    .menu-btn {
+        color: var(--color_04);
+        padding: auto 10px auto auto;
+        font-size: 2rem;
+        cursor: pointer;
+        display: block;
+        transition: color 0.5s linear;
+        z-index: 999;
+    }
+
+    .active + .menu-btn:before {
+        font-size: 2rem;
+        color: var(--color_05);
+        content: "\f550";
+    }
+}
+@media (max-width: 500px) {
+    .navbar .logo img {
+        position: absolute;
+        left: 0;
+        top: 6px;
+        z-index: 999;
+    }
+}
