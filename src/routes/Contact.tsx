@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
             <div className="box-content">
                 <div className="contact-left">
                     <h1 className="text">Entre em contato</h1>
-                    <div>
+                    <div className='contact-text'>
                         <h3>Tem alguma dúvida, sugestão ou precisa de suporte?</h3>
                         <p>Estamos esperando sua mensagem, não hesite em entrar em contato. Estamos aqui para ajudar! Utilize uma das formas de contato abaixo ou preencha o formulário para que possamos atendê-lo da melhor maneira possível.</p>
                     </div>
