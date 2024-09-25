@@ -68,7 +68,7 @@
     font-family: "Ephesis", cursive;
     font-size: 7.8vw;
     line-height: 7.8vw;
-    color: var(--color_04); 
+    color: var(--color_04);
     font-weight: 400;
 }
 
@@ -225,6 +225,11 @@
     }
 
     .home .home-left .text-3 span {
+        font-size: 5vw;
+        line-height: 5vw;
+    }
+
+    .home .home-left .text-3 b {
         font-size: 5vw;
         line-height: 5vw;
     }
