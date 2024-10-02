@@ -212,6 +212,10 @@
         gap: 10px;
     }
 
+    .home .home-right {
+        width: 90%;
+    }
+
     .home .home-right figure {
         max-width: 300px;
         max-height: 300px;
