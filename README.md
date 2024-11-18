@@ -1,79 +1,36 @@
-# Everaldo Martins - Portifólio
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Índice
-- [Descrição](#descrição)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Instalação e Uso](#instalação-e-uso)
-- [Teste o Projeto](#teste-o-projeto)
-- [Licença](#licença)
+## Getting Started
 
-## Descrição
-Este é o projeto portfólio pessoal, criado para apresentar minhas habilidades, experiências e fornecer meios de contato. O projeto é composto por seções que incluem uma introdução pessoal, experiência profissional, habilidades técnicas, equipe de trabalho e informações de contato.
+First, run the development server:
 
-## Estrutura do Projeto
-A estrutura básica de diretórios do projeto é a seguinte:
-```
-/portifolio/
-├── public/
-│   ├── icon.png
-│   └── downloads/
-│       └── CV-Everaldo.txt
-├── src/
-│   ├── assets/
-│   │   └── images/
-│   ├── components/
-│   │   ├── about.tsx
-│   │   ├── contact.tsx
-│   │   ├── experience.tsx
-│   │   ├── footer.tsx
-│   │   ├── header.tsx
-│   │   ├── home.tsx
-│   │   ├── menu.tsx
-│   │   ├── skills.tsx
-│   │   └── teams.tsx
-│   ├── style/
-│   │   └── index.css
-│   ├── main.tsx
-│   └── vite-env.csj
-├── .eslintrc.cjs
-├── .gitignore
-├── index.html
-├── package.json
-├── README.md
-└── vite.config.js
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Tecnologias Utilizadas
-- Vite
-- React
-- TypeScript
-- CSS3
-- Font Awesome (para ícones)
-- Formspree (para o formulário de contato)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Instalação e Uso
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/Everaldo-Martins/portifolio.git
-   ```
-2. **Navegue até o diretório do projeto:**
-   ```bash
-   cd portifolio
-   ```
-3. **Instale as dependências:**
-   ```bash
-   npm install
-   ```
-4. **Inicie o servidor de desenvolvimento:**
-   ```bash
-   npm run dev
-   ```
-5. **Abra o navegador e acesse `http://localhost:5173/portifolio`.**
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Teste o Projeto
-Para testar o projeto, clique [aqui](https://everaldo-martins.github.io/portifolio/).
+## Learn More
 
-## Licença
-Este projeto está licenciado sob a [MIT License](LICENSE).
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
