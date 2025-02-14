@@ -33,14 +33,14 @@
 }
 
 .home .home-right figure {
-    background-color: var(--color_05);
+    background: var(--background-radial);
     width: 100%;
     max-width: 450px;
     height: 100%;
     max-height: 450px;
     border-radius: 50%;
-    border: 5px solid var(--color_05);
-    box-shadow: 10px 10px 60px -25px var(--color_01_opacity);
+    border: 5px solid var(--border);
+    box-shadow: 10px 10px 60px -25px var(--shadown);
     z-index: 9;
 }
 
@@ -63,14 +63,14 @@
     font-size: 2vw;
     line-height: 2vw;
     padding: 0 10px;
-    color: var(--color_04); 
+    color: var(--foreground); 
 }
 
 .home .home-left .text-2 {
     font-family: "Ephesis", cursive;
     font-size: 7.2vw;
     line-height: 7.2vw;
-    color: var(--color_04);
+    color: var(--foreground);
     font-weight: 400;
 }
 
@@ -79,12 +79,12 @@
     font-optical-sizing: auto;
     font-size: 2.5vw;
     font-weight: 700;
-    color: var(--color_04);
+    color: var(--foreground);
     animation: blink 1s infinite;  
 }
 
 .home .home-left .text-3 i {
-    color: var(--color_04); 
+    color: var(--foreground); 
     font-size: 2.5rem;
     padding: 0 10px;
 }
@@ -94,20 +94,20 @@
     font-optical-sizing: auto;
     font-size: 2.5rem;
     font-weight: 500;
-    color: var(--color_04);        
+    color: var(--foreground);        
 }
 
 .home .home-left a {
     background-color: transparent;
     display: inline-block;
-    color: var(--color_05);
+    color: var(--secondary-foreground);
     font-size: 1.4rem;
     padding: 12px 24px;
     font-weight: 500;
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    border-color: var(--color_05);
+    border-color: var(--foreground);
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.5s linear;
@@ -118,8 +118,8 @@
 }
 
 .home .home-left a:hover {
-    background-color: var(--color_05);
-    color: var(--color_02);
+    background: var(--background-radial);
+    color: var(--secondary-foreground);
 }
 
 .home .home-left .social {
@@ -133,18 +133,18 @@
 }
 
 .home .home-left .social a {
-    background-color: var(--color_03_opacity);
+    background: var(--background-radial);
     width: 50px;
     height: 50px;
     font-size: 2rem;
     padding: 1rem;
-    color: var(--color_05);
+    color: var(--foreground);
     text-align: center;
     text-decoration: none;
     display: inline-block;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 2px 4px var(--color_01_opacity);
+    box-shadow: 0 2px 4px var(--shadown);
     position: relative;
     transition: all 0.2s ease 0.1s;
 }
@@ -153,8 +153,8 @@
     font-size: 1.2rem;
     font-weight: 500;
     visibility: hidden;
-    background-color: var(--color_02_opacity);
-    color: var(--color_05);
+    background: var(--background);
+    color: var(--foreground);
     text-align: center;
     border-radius: 10px;
     padding: 0.8rem;
@@ -171,11 +171,11 @@
     left: 40%;
     border-width: 5px;
     border-style: solid;
-    border-color: var(--color_02_opacity) transparent transparent transparent;
+    border-color: var(--background) transparent transparent transparent;
 }
 
 .home .home-left .social a:hover .tooltip {
-    color: var(--color_05);
+    color: var(--secondary-foreground);
     visibility: visible;
 }
 

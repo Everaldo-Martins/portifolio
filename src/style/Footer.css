@@ -1,6 +1,6 @@
 footer {
     padding: 15px 23px;
-    color: var(--color_04);
+    color: var(--foreground);
     text-align: center;
 }
 
@@ -9,5 +9,5 @@ footer .copy {
     font-weight: 500;
     font-style: normal;
     font-size: 0.8rem;
-    color: var(--color_04);
+    color: var(--secondary-foreground);
 }

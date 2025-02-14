@@ -9,8 +9,11 @@
     justify-content: space-between;
 }
 
-.navbar .logo img {
+.navbar .logo a {
+    display: flex;
+    max-width: 137px;
     max-height: 40px;
+    color: var(--foreground);
 }
 
 .navbar .menu {
@@ -31,13 +34,13 @@
     font-weight: 500;
     text-transform: uppercase;
     padding: 10px 0;
-    color: var(--color_04);
+    color: var(--foreground);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .navbar .menu li a:hover {
-    color: var(--color_05);
+    color: var(--secondary-foreground);
 }
 
 .navbar .menu li a::after {
@@ -48,7 +51,7 @@
     width: 100%;
     height: 100%;
     padding: 10px 0;
-    border-bottom: 2px solid var(--color_05);
+    border-bottom: 2px solid var(--button);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.4s ease;
@@ -62,7 +65,7 @@
 .menu-btn {
     display: none;
     font-size: 22px;
-    color: var(--color_04);
+    color: var(--button);
     cursor: pointer;
 }
 
@@ -81,7 +84,7 @@
     }   
 
     .navbar .active {        
-        background-color: var(--color_01_opacity);
+        background-color: var(--background);
         backdrop-filter: blur(0.5rem);
         position: fixed;
         left: 0;
@@ -102,7 +105,7 @@
     }
 
     .menu-btn {
-        color: var(--color_04);
+        color: var(--button);
         padding: auto 10px auto auto;
         font-size: 2rem;
         cursor: pointer;
@@ -113,7 +116,7 @@
 
     .active + .menu-btn:before {
         font-size: 2rem;
-        color: var(--color_05);
+        color: var(--button-hover);
         content: "\f550";
     }
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import logo from '../assets/logo.svg';
 import { Link } from 'react-router-dom';
 import '../style/Menu.css';
+import Logo from './logo';
 
 const Menu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);  
@@ -19,7 +19,7 @@ const Menu: React.FC = () => {
   return (
     <nav className="navbar">
         <div className="logo">
-          <a href="/portifolio"><img src={logo} alt="EMD" /></a>
+          <a href="/portifolio"><Logo /></a>
         </div>
         <ul className={`menu ${isOpen ? 'active' : ''}`}>
           <li><Link to="/portifolio" onClick={handleLinkClick}>Home</Link></li>

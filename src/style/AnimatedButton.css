@@ -5,7 +5,7 @@
     padding: 1.4rem 2rem;
     font-weight: 500;
     text-decoration: none;
-    color: var(--color_05);
+    color: var(--foreground);
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -13,7 +13,7 @@
 }
 
 .animated-button::before {
-    background-color: var(--color_01);
+    background-color: var(--secundary-background);
     content: '';
     position: absolute;
     top: 0;
@@ -35,7 +35,7 @@
 
 .animated-button span {
     position: absolute;
-    background: linear-gradient(to right, transparent, var(--color_05));
+    background: linear-gradient(to right, transparent, var(--button));
 }
 
 .animated-button span:nth-child(1),

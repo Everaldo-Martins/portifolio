@@ -17,7 +17,7 @@
 }
 
 .experience .experience-top .text{
-    background-color: var(--color_01_opacity);
+    background: var(--background-radial);
     padding: 20px;
     font-size: 1.3rem;
     font-size-adjust: none;
@@ -25,8 +25,8 @@
     text-align: justify;
     text-indent: 30px;
     border-radius: 10px;
-    color: var(--color_04); 
-    box-shadow: 0 2px 6px var(--color_03_opacity);
+    color: var(--foreground); 
+    box-shadow: 0 2px 6px var(--shadow);
 }
 
 .experience .box-container .experience-bottom {    
@@ -35,7 +35,7 @@
 }
 
 .experience .experience-bottom .card {
-    background: var(--color_01_opacity);
+    background: var(--background-radial);
     width: 33.33%;
     height: 100%;
     text-align: center;
@@ -46,19 +46,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 6px var(--color_03_opacity);
+    box-shadow: 0 2px 6px var(--shadow);
     transition: background-color 0.5s linear;
 }
 
 .experience .experience-bottom .card:hover {
-    background-color: var(--color_05_opacity);
+    background-color: var(--secondary-background);
 }
 
 .experience .experience-bottom .card .box {
     width: 90%;
     height: 90%;
     padding: 20% 20px;
-    color: var(--color_04);
+    color: var(--foreground);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,18 +68,18 @@
 }
 
 .experience .experience-bottom .card:hover .box {
-    color: var(--color_01);
+    color: var(--secondary-foreground);
     transform: scale(1.1);
 }
 
 .experience .experience-bottom .card i {
     font-size: 5rem;
-    color: var(--color_05);
+    color: var(--foreground);
     transition: color 0.3s ease;
 }
 
 .experience .experience-bottom .card:hover i {
-    color: var(--color_01);
+    color: var(--button);
 }
 
 .experience .experience-bottom .card .text {
