@@ -33,20 +33,20 @@
 }
 
 .home .home-right figure {
-    background: var(--background-radial);
+    background: var(--logo);
     width: 100%;
-    max-width: 450px;
+    max-width: 500px;
     height: 100%;
-    max-height: 450px;
+    max-height: 500px;
     border-radius: 50%;
-    border: 5px solid var(--border);
-    box-shadow: 10px 10px 60px -25px var(--shadown);
+    border: 10px solid var(--border);   
     z-index: 9;
 }
 
 .home .home-right img{
     width: 100%;
     border-radius: 50%;
+    filter: drop-shadow(8px 8px 10px var(--secondary-color));
 }
 
 .home .home-left .home-text {
@@ -62,7 +62,7 @@
 .home .home-left .text-1 {
     font-size: 2vw;
     line-height: 2vw;
-    padding: 0 10px;
+    padding: 0 5px;
     color: var(--foreground); 
 }
 
@@ -70,7 +70,7 @@
     font-family: "Ephesis", cursive;
     font-size: 7.2vw;
     line-height: 7.2vw;
-    color: var(--foreground);
+    color: var(--logo);
     font-weight: 400;
 }
 
@@ -153,29 +153,29 @@
     font-size: 1.2rem;
     font-weight: 500;
     visibility: hidden;
-    background: var(--background);
-    color: var(--foreground);
+    background: var(--background-tooltip);
+    color: var(--foreground-tooltip);
     text-align: center;
     border-radius: 10px;
     padding: 0.8rem;
     position: absolute;
     width: fit-content;
-    bottom: 120%;
+    top: 120%;
     left: -22%;
 }
 
 .home .home-left .social a .tooltip::after {
     content: " ";
     position: absolute;
-    top: 100%;
+    bottom: 100%;
     left: 40%;
     border-width: 5px;
     border-style: solid;
-    border-color: var(--background) transparent transparent transparent;
+    border-color: transparent transparent var(--background-tooltip) transparent;
 }
 
 .home .home-left .social a:hover .tooltip {
-    color: var(--secondary-foreground);
+    color: var(--foreground-tooltip);
     visibility: visible;
 }
 

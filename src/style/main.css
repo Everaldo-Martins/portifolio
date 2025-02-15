@@ -98,6 +98,7 @@ html, body {
     --logo: #00ccff;
     --foreground: #333333;
     --secondary-foreground: #666666;
+    --foreground-tooltip: #f0f0f0;
     --border: #333333;
     --border-hover: #00ccff;
     --shadown: #33333311;
@@ -122,8 +123,10 @@ html, body {
         --secondary-background: #333333;
         --background-radial: radial-gradient(circle, #222222 1%, #333333 100%);
         --background-modal: #22222233;
+        --background-tooltip: #f2f2f2;
         --foreground: #f2f2f2;
         --secondary-foreground: #e4e4e4;
+        --foreground-tooltip: #222222;
         --border: #444444;
         --border-hover: #00ccff;
         --shadown: #f2f2f211;

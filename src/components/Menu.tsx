@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/Menu.css';
-import Logo from './logo';
+import Logo from './Logo';
 
 const Menu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);  
