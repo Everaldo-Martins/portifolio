@@ -36,8 +36,6 @@
     background: var(--logo);
     width: 100%;
     max-width: 500px;
-    height: 100%;
-    max-height: 500px;
     border-radius: 50%;
     border: 10px solid var(--border);   
     z-index: 9;
