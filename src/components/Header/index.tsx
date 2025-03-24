@@ -1,7 +1,6 @@
-import React from 'react';
-import Menu from './Menu.tsx';
+import Menu from './Menu';
 
-const Header: React.FC = () => {
+function Header (){
   return (
     <>  
       <header>             

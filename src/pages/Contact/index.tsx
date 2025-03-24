@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-import '../style/Contact.css';
+import { useEffect, useRef } from 'react';
+import './Contact.css';
+import { FaUser, FaMapLocationDot, FaEnvelope } from 'react-icons/fa6';
 
-const Contact: React.FC = () => {
+function Contact(){
     const formRef = useRef<HTMLFormElement>(null);
     const statusRef = useRef<HTMLDivElement>(null);
 
@@ -56,21 +57,21 @@ const Contact: React.FC = () => {
                     </div>
                     <div className="icons">
                         <div className="row">
-                            <i className="fas fa-user"></i>
+                            <FaUser className="icon" />
                             <div className="info">
                                 <div className="head">Nome</div>
                                 <div className="sub-title">Everaldo Martins</div>
                             </div>
                         </div>
                         <div className="row">
-                            <i className="fas fa-map-marker-alt"></i>
+                            <FaMapLocationDot className="icon" />
                             <div className="info">
                                 <div className="head">Endereço</div>
                                 <div className="sub-title">Rua Quatro de Outubro, Santa Luzia, Paraíba</div>
                             </div>
                         </div>
                         <div className="row">
-                            <i className="fas fa-envelope"></i>
+                            <FaEnvelope className="icon" />
                             <div className="info">
                                 <div className="head">E-mail</div>
                                 <div className="sub-title">everaldoinfortecnico@gmail.com</div>

@@ -65,15 +65,28 @@
     color: var(--foreground); 
 }
 
-@media (max-width: 947px) {    
-    .about .box-content {
-        width: 100%;
-        flex-direction: column;
-    }
+.about .about-right a {
+    background-color: transparent;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 12px 24px;
+    font-weight: 400;
+    color: var(--foreground);
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.5s linear;
+}
 
-    .about .box-content .about-left,
-    .about .box-content .about-right {
-        width: 100%;
-    }
-}   
+.about .about-right .icon {
+    font-size: 1.8rem;
+    color: var(--foreground);
+}
+
+.about .about-right a:hover {
+    background-color: var(--secondary-background);
+    color: var(--foreground);
+}
     

@@ -1,0 +1,173 @@
+.home .box-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.home .home-left, .home .home-right {  
+    width: 60%;     
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: column; 
+}
+
+.home .home-left {
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.home .home-right { 
+    width: 40%;
+    justify-content: right;
+    align-items: center;
+    position: relative;
+}
+
+.home .home-right figure {
+    background-color: var(--secondary-background);
+    width: 100%;
+    max-width: 430px;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    animation: drop 3s ease-in-out infinite;
+    overflow: hidden;
+}
+
+.home .home-right img{
+    width: 100%;
+    border-radius: 50%;
+    filter: drop-shadow(8px 8px 10px var(--secondary-color));
+}
+
+.home .home-left .home-text {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.6rem;
+}
+
+.home .home-left h4 {
+    font-size: 2vw;
+    line-height: 2vw;
+    padding: 0 5px;
+    color: var(--foreground); 
+}
+
+.home .home-left h2 {
+    font-family: "Ephesis", cursive;
+    font-size: 7.2vw;
+    line-height: 7.2vw;
+    color: var(--logo);
+    font-weight: 400;
+}
+
+.home .home-left h4 b {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 2.5vw;
+    font-weight: 700;
+    color: var(--foreground);
+    animation: blink 1s infinite;  
+}
+
+.home .home-left h4 span {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--foreground);        
+}
+
+.home .home-left p {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: justify;
+    color: var(--foreground);        
+}
+
+.home .home-left a {
+    background-color: transparent;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 12px 24px;
+    font-weight: 400;
+    color: var(--foreground);
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.5s linear;
+}
+
+.home .home-left .icon {
+    font-size: 1.8rem;
+    color: var(--foreground);
+}
+
+.home .home-left a:hover {
+    background-color: var(--secondary-background);
+    color: var(--foreground);
+}
+
+.home .home-left .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    width: fit-content;
+    height: 50px;
+}
+
+.home .home-left .social a {
+    background-color: transparent;
+    padding: 0;
+    font-size: 2rem;
+    color: var(--foreground);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    position: relative;
+    transition: all 0.2s ease 0.1s;
+}
+
+.home .home-left .social a .icon {
+    font-size: 3rem;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes drop {
+    0% {
+        filter: drop-shadow(0px 0px 4px var(--logo));
+    }
+    50% {
+        filter: drop-shadow(0px 0px 12px var(--logo));
+    }
+    100% {
+        filter: drop-shadow(0px 0px 4px var(--logo));
+    }
+}

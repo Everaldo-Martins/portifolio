@@ -1,54 +1,30 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './style/main.css';
+import { BrowserRouter, Routes, Route } from "react-router";
+import './style/index.css';
+import './style/AnimatedButton.css';
 
-import App from './App.tsx';
-import ErrorPage from './routes/ErrorPage.tsx';
-import Home from './routes/Home.tsx';
-import About from './routes/About.tsx';
-import Experience from './routes/Experience.tsx';
-import Skills from './routes/Skills.tsx';
-import Teams from './routes/Teams.tsx';
-import Contact from './routes/Contact.tsx';
+import App from './App';
 
-const router = createBrowserRouter([
-  {
-    path: "/portifolio",
-    element: <App />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/portifolio",
-        element: <Home />
-      },
-      {
-        path: "/portifolio/about",
-        element: <About />
-      },
-      {
-        path: "/portifolio/experience",
-        element: <Experience />
-      },
-      {
-        path: "/portifolio/skills",
-        element: <Skills />
-      },
-      {
-        path: "/portifolio/teams",
-        element: <Teams />
-      },
-      {
-        path: "/portifolio/contact",
-        element: <Contact />
-      },
-    ],
-  },  
-]);
+import ErrorPage from './pages/ErrorPage';
+import Home from './pages/Home';
+import About from './pages/About';
+import Skills from './pages/Skills';
+import Contact from './pages/Contact';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={ router } />
+    <BrowserRouter>
+      <Routes>
+        <Route element={<App />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} /> 
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/contact" element={<Contact />} />   
+        </Route>
+        <Route errorElement element={<ErrorPage />} />
+      </Routes>
+    </BrowserRouter>
   </StrictMode>
 )
 

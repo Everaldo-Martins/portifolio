@@ -12,7 +12,7 @@
 .contact .box-content .contact-right {
     width: 50%;
     height: 90%;
-    color: var(--color_04);
+    color: var(--foreground);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -64,9 +64,9 @@
     gap: 15px;
 }
 
-.contact .box-content .contact-left .row i {
+.contact .box-content .contact-left .row .icon {
     font-size: 2.6rem;
-    color: var(--color_05);
+    color: var(--logo);
 }
 
 .contact .box-content .contact-left .info {
@@ -82,7 +82,7 @@
 
 .contact .box-content .contact-left .info .sub-title {
     font-size: 1rem;
-    color: var(--color_04);
+    color: var(--secondary-foreground);
 }
 
 .contact .box-content .contact-right form {
@@ -114,13 +114,13 @@
 .contact .box-content .contact-right form textarea,
 .contact .box-content .contact-right form .field input:focus,
 .contact .box-content .contact-right form textarea:focus {
-    background-color: var(--color_01_opacity);
+    background: var(--background-radial);
     width: 100%;
     padding: 15px;
     border-radius: 6px;
     font-size: 17px;
-    color: var(--color_04);
-    border: 2px solid var(--color_05);
+    color: var(--foreground);
+    border: 2px solid var(--border);
     transition: border-color 0.3s ease;
     outline: none;
 }
@@ -128,7 +128,7 @@
 .contact .box-content .contact-right form input::placeholder,
 .contact .box-content .contact-right form textarea::placeholder {
     font-weight: 500;
-    color: var(--color_05);
+    color: var(--foreground);
 }
 
 .contact .box-content .contact-right form textarea {
@@ -136,23 +136,23 @@
 }
 
 .contact .box-content .contact-right form button {
-    background-color: var(--color_01_opacity);
-    color: var(--color_05);
+    background-color: transparent;
+    color: var(--foreground);
     font-size: 1.4rem;
     padding: 12px 24px;
     border-radius: 10px;
-    border: 2px solid var(--color_05);
+    border: 2px solid var(--border);
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-.contact .box-content .contact-right button i {
+.contact .box-content .contact-right button .icon {
     font-size: 2rem;
 }
 
 .contact .box-content .contact-right form button:hover {
-    background: var(--color_05);
-    color: var(--color_01);
+    background: var(--background-radial);
+    color: var(--secondary-foreground);
 }
 
 .contact .box-content .my-form-status {    
@@ -172,31 +172,4 @@
 
 .contact .box-content .my-form-status .sucess { 
     color: var(--sucess);
-}
-
-@media (max-width: 947px) {
-    .contact .box-content{
-        flex-direction: column;
-    }
-    .contact .box-content .contact-left,
-    .contact .box-content .contact-right {
-        width: 100%;
-    }
-
-    .contact .box-content .text {
-        font-size: 2rem;
-        font-weight: 600;
-    }
-
-    .contact .box-content .contact-left h3 {
-        font-size: 1.4rem;
-    }
-
-    .contact .box-content .contact-right form .fields {
-        flex-direction: column;
-    }
-
-    .contact .box-content .contact-right form button {
-        width: 100%;
-    }
 }

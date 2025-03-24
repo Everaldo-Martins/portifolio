@@ -50,9 +50,9 @@
     transition: background-color 0.5s linear;
 }
 
-.skills .box-content i {
-    font-size: 2rem;
-    padding: 0 0 0 15px;
+.skills .box-content .icon {
+    font-size: 1.8rem;
+    color: var(--foreground);
 }
 
 .skills .box-content a:hover {
@@ -163,15 +163,3 @@
         width: 70%;
     }
 }
-
-@media (max-width: 947px) {    
-    .skills .box-content {
-        width: 100%;
-        flex-direction: column;
-    }
-    
-    .skills .box-content .skills-left,
-    .skills .box-content .skills-right {
-        width: 100%;
-    }
-} 

@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import '../style/Footer.css'
+import { useEffect } from 'react';
+import './Footer.css'
 
-const Footer: React.FC = () => {    
+function Footer () {    
     useEffect(() => {
         const copy = document.querySelector(".copy") as HTMLElement;
         copy.innerHTML = `&copy; EDM &#174; - Dev Everaldo Martins - ${new Date().getFullYear()} - Todos os direitos reservados.`;

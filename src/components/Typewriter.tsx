@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-const texts = ["Estudante", "Web Designer", "Desenvolvedor", "Técnico em Informática"];
+const texts = ["Web Designer", "Desenvolvedor", "Engenheiro de Software", "Programador"];
 const typingSpeed = 300;
 const erasingSpeed = 200;
 const delayAfterTyping = 1500;

@@ -7,5 +7,5 @@ export default defineConfig({
   server: {
     port: 5000
   },
-  base: "/portifolio"
+  //base: "/portifolio"
 })

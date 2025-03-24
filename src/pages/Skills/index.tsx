@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import '../style/Skills.css';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router';
+import lineSpan from '../../components/AnimatedButton';
+import { FaEnvelope } from 'react-icons/fa6';
+import './Skills.css';
 
 const skillsData = [
     { name: 'HTML', percentage: 90, className: 'html' },
@@ -12,7 +14,7 @@ const skillsData = [
     { name: 'MySQL', percentage: 70, className: 'mysql' }
 ];
 
-const Skills: React.FC = () => {
+function Skills(){
     const [percentages, setPercentages] = useState<number[]>(Array(skillsData.length).fill(0));
 
     useEffect(() => {
@@ -45,7 +47,10 @@ const Skills: React.FC = () => {
                         complexas. Sempre buscando adquirir conhecimento e adaptar-se às novas tecnologias para entregar 
                         soluções de alta qualidade.
                     </p>
-                    <Link to="/portifolio/contact"><i className="fa-solid fa-circle-exclamation"></i> Informação</Link>
+                    <Link to="/portifolio/contact" className='animated-button'>
+                        {lineSpan()}
+                        <FaEnvelope className="icon" /> Contrate-me
+                    </Link>
                 </div>
                 
                 <div className="skills-right">

@@ -1,18 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import profile from '../assets/images/profile-1.jpg';
-import '../style/About.css';
-import '../style/AnimatedButton.css';
+import { Link } from 'react-router';
+import { FaFloppyDisk } from 'react-icons/fa6';
+import lineSpan from '../../components/AnimatedButton';
+import profile from '../../assets/images/profile-1.jpg';
+import './About.css';
 
-
-const About: React.FC = () => {
-    const lineSpan = () => {
-        const el = [];
-        for (let i = 0; i < 4; i++) {
-            el.push(<span></span>);          
-        }
-        return el;
-    }
+function About(){    
     return (
         <section className="about">
             <div className="box-content">
@@ -39,7 +31,7 @@ const About: React.FC = () => {
                     </p>
                     <Link to="/portifolio/downloads/CV-Everaldo.txt" target='_blank' className='animated-button'>
                         {lineSpan()}
-                        <i className="fa-solid fa-file-arrow-down"></i>
+                        <FaFloppyDisk className="icon" />
                         Baixar C.V.
                     </Link>
                 </div>
